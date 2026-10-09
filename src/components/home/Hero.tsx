@@ -14,18 +14,20 @@ export default function Hero() {
         sizes="100vw"
         className="hero-zoom object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-pine/80 via-pine/55 to-pine/90" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/90" aria-hidden="true" />
+
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.55),transparent_65%)]" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pt-24 text-center">
         <h1>
           <span className="sr-only">Grand Piece Restaurant – restaurant italian în Timișoara</span>
           <Image
-            src={images.logoLight}
+            src={images.logo}
             alt=""
-            width={852}
-            height={822}
+            width={1100}
+            height={668}
             priority
-            className="mx-auto h-auto w-[min(80vw,30rem)]"
+            className="mx-auto h-auto w-[min(85vw,34rem)]"
           />
         </h1>
         <div className="ornament mt-2 justify-center text-sand" aria-hidden="true">◆</div>

@@ -37,18 +37,18 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid ? "bg-pine/95 py-3 shadow-lg shadow-black/10 backdrop-blur" : "bg-transparent py-5"
+        solid ? "bg-pine/95 py-3 shadow-lg shadow-black/20 backdrop-blur" : "bg-gradient-to-b from-black/70 to-transparent py-5"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link href="/" onClick={() => setOpen(false)} className="block" aria-label={`${site.name} – prima pagină`}>
           <Image
-            src={images.logoLight}
+            src={images.logo}
             alt=""
-            width={852}
-            height={822}
+            width={1100}
+            height={668}
             priority
-            className={`w-auto transition-all duration-500 ${solid ? "h-12" : "h-[4.5rem]"}`}
+            className={`w-auto transition-all duration-500 ${solid ? "h-14" : "h-[4.5rem]"}`}
           />
         </Link>
 

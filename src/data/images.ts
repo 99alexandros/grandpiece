@@ -8,5 +8,5 @@ export const images = {
   about: "/menu/010.jpg",
   ogImage: "/og.jpg",
   logo: "/brand/logo.png",
-  logoLight: "/brand/logo-light.png",
+  
 } as const;

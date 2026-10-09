@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-pine text-bone/80">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-3">
         <div>
-          <Image src={images.logoLight} alt="Grand Piece Restaurant" width={852} height={822} className="h-40 w-auto" />
+          <Image src={images.logo} alt="Grand Piece Restaurant" width={1100} height={668} className="h-32 w-auto" />
           <p className="mt-4 font-serif text-xl italic text-sand">{copy.motto}</p>
           </div>
 
