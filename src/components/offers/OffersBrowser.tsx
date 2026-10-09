@@ -15,7 +15,7 @@ type TabId = (typeof tabs)[number]["id"];
 function OfferCard({ offer, index }: { offer: Offer; index: number }) {
   return (
     <li className="group flex flex-col overflow-hidden border border-pine/10 bg-white shadow-sm shadow-black/5 transition-shadow duration-300 hover:shadow-lg hover:shadow-black/10">
-      <div className="relative aspect-[4/3] overflow-hidden bg-pine">
+      <div className="relative aspect-[4/5] overflow-hidden bg-pine">
         <Image
           src={offer.image}
           alt={`${offer.title} – ${offer.description}`}
