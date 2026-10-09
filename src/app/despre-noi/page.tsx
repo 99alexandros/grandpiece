@@ -28,13 +28,13 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={150}>
           <div className="relative aspect-[4/3] w-full">
-            <div className="absolute -inset-2 -translate-x-2 translate-y-2 sm:-inset-3 sm:-translate-x-3 sm:translate-y-3 border border-brand rounded-[var(--r)]" aria-hidden="true" />
+            <div className="absolute -inset-2 -translate-x-2 translate-y-2 sm:-inset-3 sm:-translate-x-3 sm:translate-y-3 border border-brand" aria-hidden="true" />
             <SafeImage
               src={images.about}
               alt="Masă elegantă pregătită pentru oaspeți"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
-              className="object-cover rounded-[var(--r)]"
+              className="object-cover"
             />
           </div>
         </Reveal>

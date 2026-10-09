@@ -75,7 +75,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/rezervari"
-            className="rounded-[var(--r-btn)] border border-brand bg-brand px-6 py-2.5 text-[0.75rem] font-medium uppercase tracking-[0.22em] text-on-brand transition-colors hover:border-sand hover:bg-transparent hover:text-sand"
+            className="border border-brand bg-brand px-6 py-2.5 text-[0.75rem] font-medium uppercase tracking-[0.22em] text-on-brand transition-colors hover:border-sand hover:bg-transparent hover:text-sand"
           >
             Rezervări
           </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
             href="/rezervari"
             tabIndex={open ? 0 : -1}
             onClick={() => setOpen(false)}
-            className="rounded-[var(--r-btn)] mt-4 border border-brand bg-brand px-10 py-3.5 text-sm font-medium uppercase tracking-[0.25em] text-on-brand"
+            className="mt-4 border border-brand bg-brand px-10 py-3.5 text-sm font-medium uppercase tracking-[0.25em] text-on-brand"
           >
             Rezervări
           </Link>

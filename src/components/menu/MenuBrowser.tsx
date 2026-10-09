@@ -19,7 +19,7 @@ function groupBySubcategory(list: Dish[]) {
 
 function DishCard({ d }: { d: Dish }) {
   return (
-    <li className="rounded-[var(--r)] group flex flex-col overflow-hidden border border-pine/10 bg-white shadow-sm shadow-black/5 transition-shadow duration-300 hover:shadow-lg hover:shadow-black/10">
+    <li className="group flex flex-col overflow-hidden border border-pine/10 bg-white shadow-sm shadow-black/5 transition-shadow duration-300 hover:shadow-lg hover:shadow-black/10">
       <div className="relative aspect-[4/3] overflow-hidden bg-pine">
         {d.image && (
           <Image
@@ -74,7 +74,7 @@ export default function MenuBrowser() {
               type="button"
               aria-pressed={active === t.id}
               onClick={() => setActive(t.id)}
-              className={`rounded-[var(--r-btn)] shrink-0 border px-5 py-2.5 text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
+              className={`shrink-0 border px-5 py-2.5 text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
                 active === t.id
                   ? "border-pine bg-pine text-bone"
                   : "border-pine/25 bg-white text-pine hover:border-pine"

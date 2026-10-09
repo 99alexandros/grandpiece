@@ -1,15 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Cormorant_Garamond,
-  DM_Sans,
-  Jost,
-  Outfit,
-  Playfair_Display,
-} from "next/font/google";
+import { Cormorant_Garamond, Jost, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ThemePreview from "@/components/layout/ThemePreview";
 import { site } from "@/data/site";
 import { images } from "@/data/images";
 import { restaurantJsonLd } from "@/lib/schema";
@@ -28,10 +21,6 @@ const playfair = Playfair_Display({
   weight: ["500", "600", "700"],
   display: "swap",
 });
-
-// Fonturi pentru variantele de stil (previzualizare) – se șterg odată cu alegerea stilului.
-const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
-const dmsans = DM_Sans({ variable: "--font-dmsans", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
 
 const jost = Jost({
   variable: "--font-jost",
@@ -54,7 +43,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} – Restaurant italian în Timișoara`,
     description: site.description,
-    images: [{ url: images.ogImage, width: 1200, height: 800, alt: `${site.name} – interior` }],
+    images: [{ url: images.ogImage, width: 1200, height: 630, alt: `${site.name} – logo` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -66,19 +55,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#14261f",
+  themeColor: "#0e1511",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ro" suppressHydrationWarning className={[cormorant, jost, playfair, outfit, dmsans].map((f) => f.variable).join(" ")}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem("gp-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}`,
-          }}
-        />
-      </head>
+    <html lang="ro" className={`${cormorant.variable} ${jost.variable} ${playfair.variable}`}>
       <body className="flex min-h-screen flex-col">
         <script
           type="application/ld+json"
@@ -97,7 +79,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
-        <ThemePreview />
       </body>
     </html>
   );

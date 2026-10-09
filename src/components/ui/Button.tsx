@@ -27,7 +27,7 @@ export default function ButtonLink({
   external,
   ariaLabel,
 }: ButtonLinkProps) {
-  const cls = `inline-flex items-center justify-center rounded-[var(--r-btn)] px-8 py-3.5 text-[0.8rem] font-medium uppercase tracking-[0.22em] transition-colors duration-300 ${variants[variant]} ${className}`;
+  const cls = `inline-flex items-center justify-center px-8 py-3.5 text-[0.8rem] font-medium uppercase tracking-[0.22em] transition-colors duration-300 ${variants[variant]} ${className}`;
   if (external || href.startsWith("tel:") || href.startsWith("mailto:")) {
     return (
       <a

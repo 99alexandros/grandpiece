@@ -66,7 +66,7 @@ export default function GalleryGrid() {
                 setIndex(i);
               }}
               aria-label={`Mărește imaginea: ${img.alt}`}
-              className="group relative block w-full overflow-hidden rounded-[var(--r)]"
+              className="group relative block w-full overflow-hidden"
             >
               <Image
                 src={img.src}
