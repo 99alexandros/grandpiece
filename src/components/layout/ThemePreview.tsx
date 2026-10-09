@@ -6,11 +6,9 @@ import { useState, useSyncExternalStore } from "react";
 // (și linia care o folosește din layout.tsx), iar culorile alese devin cele implicite în globals.css.
 
 const themes = [
-  { id: "default", label: "Actual", note: "Playfair · verde-negru & roșu", swatch: ["#0e1511", "#b5232f", "#f4f0e8"] },
-  { id: "rustic", label: "1 · Trattoria rustică", note: "Fraunces · cald, rotunjit", swatch: ["#17130f", "#b8432f", "#f6eedc"] },
-  { id: "editorial", label: "2 · Editorial de lux", note: "Bodoni · negru & auriu", swatch: ["#0b0b0b", "#8f6f3c", "#f8f5ef"] },
-  { id: "roman", label: "3 · Clasic roman", note: "Cinzel · vișiniu & marmură", swatch: ["#120d0e", "#7d1f2c", "#f3f1ec"] },
-  { id: "modern", label: "4 · Bistro modern", note: "Outfit · alb & verde", swatch: ["#0a0a0a", "#1f6b45", "#ffffff"] },
+  { id: "default", label: "Actual", note: "Playfair · colțuri drepte", swatch: ["#0e1511", "#b5232f", "#f4f0e8"] },
+  { id: "modern", label: "Bistro modern", note: "Outfit · alb & verde, rotunjit", swatch: ["#0a0a0a", "#1f6b45", "#ffffff"] },
+  { id: "mix", label: "Mix", note: "culorile actuale + fonturi și forme bistro", swatch: ["#0e1511", "#b5232f", "#f4f0e8"] },
 ] as const;
 
 export const THEME_KEY = "gp-theme";
@@ -76,7 +74,7 @@ export default function ThemePreview() {
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-2 rounded-full border border-white/25 bg-black/85 px-4 py-2.5 text-xs font-medium shadow-xl backdrop-blur"
+        className="flex items-center gap-2 whitespace-nowrap rounded-full border border-white/25 bg-black/85 px-4 py-2.5 text-xs font-medium shadow-xl backdrop-blur"
       >
         <span className="flex -space-x-1" aria-hidden="true">
           {current.swatch.map((c) => (

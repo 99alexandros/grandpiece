@@ -78,4 +78,4 @@ Formularul din `/rezervari` trimite datele către `src/app/api/rezervari/route.t
 
 ## Previzualizare stiluri (temporar)
 
-În josul fiecărei pagini există butonul „Stil: …” cu 5 variante (Actual, Trattoria rustică, Editorial de lux, Clasic roman, Bistro modern). După ce alegi varianta, se șterg `src/components/layout/ThemePreview.tsx`, scriptul `gp-theme` și fonturile suplimentare din `src/app/layout.tsx`, iar valorile variantei alese se mută în blocul `:root` din `src/app/globals.css`.
+În josul fiecărei pagini există butonul „Stil: …” cu 3 variante (Actual, Bistro modern, Mix). După ce alegi varianta, se șterg `src/components/layout/ThemePreview.tsx`, scriptul `gp-theme` și fonturile suplimentare din `src/app/layout.tsx`, iar valorile variantei alese se mută în blocul `:root` din `src/app/globals.css`.

@@ -20,59 +20,7 @@
 }
 
 /* ===== Variante de stil (previzualizare) – se aleg din butonul de jos al paginii ===== */
-/* 1 · Trattoria rustică */
-:root[data-theme="rustic"] {
-  --cream: #f6eedc;
-  --cream-deep: #ecdfc3;
-  --pine: #17130f;
-  --pine-soft: #2a221a;
-  --brand: #b8432f;
-  --sand: #efc89a;
-  --wine: #8c2f1f;
-  --ink: #2b221a;
-  --bone: #faf3e3;
-  --on-brand: #fff6ea;
-  --heading-font: var(--font-fraunces), Georgia, serif;
-  --body-font: var(--font-nunito), system-ui, sans-serif;
-  --r: 14px;
-  --r-btn: 999px;
-}
-
-/* 2 · Editorial de lux */
-:root[data-theme="editorial"] {
-  --cream: #f8f5ef;
-  --cream-deep: #ece6da;
-  --pine: #0b0b0b;
-  --pine-soft: #1a1a1a;
-  --brand: #8f6f3c;
-  --sand: #d8bd8a;
-  --wine: #5e4824;
-  --ink: #1a1a1a;
-  --bone: #f5f0e6;
-  --on-brand: #fbf6ea;
-  --heading-font: var(--font-bodoni), Georgia, serif;
-  --heading-track: 0.01em;
-}
-
-/* 3 · Clasic roman */
-:root[data-theme="roman"] {
-  --cream: #f3f1ec;
-  --cream-deep: #e5e1d8;
-  --pine: #120d0e;
-  --pine-soft: #231819;
-  --brand: #7d1f2c;
-  --sand: #e2c48a;
-  --wine: #5c1620;
-  --ink: #221b1b;
-  --bone: #f6f1e9;
-  --on-brand: #fbf3ea;
-  --heading-font: var(--font-cinzel), Georgia, serif;
-  --body-font: var(--font-lato), system-ui, sans-serif;
-  --heading-case: uppercase;
-  --heading-track: 0.05em;
-}
-
-/* 4 · Bistro modern */
+/* Bistro modern */
 :root[data-theme="modern"] {
   --cream: #ffffff;
   --cream-deep: #f1f1ee;
@@ -90,9 +38,22 @@
   --r-btn: 999px;
 }
 
-h1, h2, h3, h4 {
-  text-transform: var(--heading-case);
-  letter-spacing: var(--heading-track);
+/* Mix: culorile din „Actual” + fonturile și formele din „Bistro modern” */
+:root[data-theme="mix"] {
+  --heading-font: var(--font-outfit), system-ui, sans-serif;
+  --body-font: var(--font-dmsans), system-ui, sans-serif;
+  --heading-weight: 600;
+  --heading-track: -0.01em;
+  --r: 16px;
+  --r-btn: 999px;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-weight: var(--heading-weight, inherit);
+    text-transform: var(--heading-case);
+    letter-spacing: var(--heading-track);
+  }
 }
 
 @theme inline {
