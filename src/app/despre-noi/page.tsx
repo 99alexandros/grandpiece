@@ -89,7 +89,7 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-pine py-24 lg:py-28" aria-labelledby="vision-title">
-        <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[1.3fr_1px_1fr] lg:gap-16">
+        <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1px_1fr] lg:gap-16">
           <Reveal>
             <p id="vision-title" className="text-[0.75rem] font-medium uppercase tracking-[0.35em] text-sand">
               {copy.vision.eyebrow}
@@ -103,7 +103,11 @@ export default function AboutPage() {
           <div className="hidden bg-bone/20 lg:block" aria-hidden="true" />
           <Reveal delay={150}>
             <p className="text-[0.75rem] font-medium uppercase tracking-[0.35em] text-sand">{copy.mission.eyebrow}</p>
-            <p className="mt-6 font-display text-2xl italic leading-snug text-bone sm:text-3xl">{copy.mission.text}</p>
+            <blockquote className="mt-6 font-display text-3xl italic leading-snug text-bone sm:text-4xl">
+              <span className="text-brand" aria-hidden="true">„</span>
+              {copy.mission.text}
+              <span className="text-brand" aria-hidden="true">”</span>
+            </blockquote>
           </Reveal>
         </div>
       </section>
