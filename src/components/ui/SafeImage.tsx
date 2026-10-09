@@ -14,5 +14,5 @@ export default function SafeImage(props: ImageProps) {
       </div>
     );
   }
-  return <Image {...props} onError={() => setFailed(true)} />;
+  return <Image {...props} alt={props.alt} onError={() => setFailed(true)} />;
 }
