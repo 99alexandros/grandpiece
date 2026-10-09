@@ -69,7 +69,17 @@ export default function MenuBrowser() {
   const hashFilter = categories.find((c) => c.id === hash)?.id;
   const [picked, setPicked] = useState<Filter | null>(null);
   const active: Filter = picked ?? hashFilter ?? "all";
-  const setActive = setPicked;
+
+  // La schimbarea categoriei, pagina revine la începutul meniului: altfel, rămânând la poziția
+  // veche, lista scurtă de mai jos te lasă „jos de tot”.
+  function setActive(id: Filter) {
+    setPicked(id);
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        document.getElementById("menu-top")?.scrollIntoView({ block: "start", behavior: "instant" });
+      }),
+    );
+  }
 
   // La intrarea pe o categorie, pagina se oprește la începutul meniului (sub navbar), nu la poziția paginii anterioare.
   useEffect(() => {
