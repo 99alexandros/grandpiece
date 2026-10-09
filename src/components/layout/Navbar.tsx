@@ -32,6 +32,8 @@ export default function Navbar() {
   }, [open]);
 
   const solid = scrolled || open;
+  // Pe telefon, în hero logo-ul mare e deja vizibil – nu îl dublăm în navbar (pe desktop rămâne).
+  const hideLogo = pathname === "/" && !solid;
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
@@ -42,7 +44,12 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" onClick={() => setOpen(false)} className="block" aria-label={`${site.name} – prima pagină`}>
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          className={`block transition-opacity duration-500 ${hideLogo ? "max-lg:pointer-events-none max-lg:opacity-0" : ""}`}
+          aria-label={`${site.name} – prima pagină`}
+        >
           <Image
             src={images.logo}
             alt=""
