@@ -71,16 +71,25 @@ export default function MenuBrowser() {
   const active: Filter = picked ?? hashFilter ?? "all";
   const setActive = setPicked;
 
+  // La intrarea pe o categorie, pagina se oprește la începutul meniului (sub navbar), nu la poziția paginii anterioare.
   useEffect(() => {
-    if (hashFilter) document.getElementById("menu-filters")?.scrollIntoView({ block: "start" });
+    if (!hashFilter) return;
+    const id = requestAnimationFrame(() => {
+      document.getElementById("menu-top")?.scrollIntoView({ block: "start", behavior: "instant" });
+      // Pe telefon, bara cu categorii se derulează lateral până la categoria aleasă (doar orizontal).
+      const btn = document.querySelector<HTMLElement>("#menu-top [aria-pressed=true]");
+      const strip = btn?.parentElement;
+      if (btn && strip) strip.scrollLeft = btn.offsetLeft - (strip.clientWidth - btn.offsetWidth) / 2;
+    });
+    return () => cancelAnimationFrame(id);
   }, [hashFilter]);
 
   const tabs: { id: Filter; label: string }[] = [{ id: "all", label: "Toate" }, ...categories];
   const visibleCategories = categories.filter((c) => active === "all" || c.id === active);
 
   return (
-    <div>
-      <div id="menu-filters" className="sticky top-20 z-30 border-b border-pine/10 bg-cream/95 backdrop-blur">
+    <div id="menu-top">
+      <div className="sticky top-20 z-30 border-b border-pine/10 bg-cream/95 backdrop-blur">
         <div
           role="group"
           aria-label="Filtrează meniul pe categorii"
