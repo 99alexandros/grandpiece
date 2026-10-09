@@ -36,7 +36,6 @@ export const copy = {
     text: [
       "Povestea Grand Piece a început în toamna anului 2022, când chef Daria Constantinică, după zece ani în bucătăria faimosului restaurant La Pergola din Roma, alături de chef Heinz Beck, și-a propus să aducă în Timișoara gustul autentic italienesc.",
       "Grand Piece este locul în care rafinamentul italian întâlnește pasiunea pentru gastronomie. Am creat restaurantul din dorința de a oferi oaspeților preparate inspirate din bucătăria italiană, într-un ambient elegant și primitor. Fiecare detaliu este ales cu grijă pentru ca o simplă masă să devină un moment de savurat.",
-      "Iar când vremea o permite, masa continuă pe terasa noastră rooftop: un loc cu priveliște spre oraș, perfect pentru apusuri, cocktailuri și seri speciale.",
     ],
   },
   facts: [
