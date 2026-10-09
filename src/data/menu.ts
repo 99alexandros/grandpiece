@@ -72,11 +72,11 @@ export const dishes: Dish[] = [
   { code: "045", category: "bauturi", subcategory: "Cafea", name: "Cappuccino", description: "espresso, spumă de lapte", price: 12, image: "/menu/045.jpg" },
   { code: "046", category: "bauturi", subcategory: "Cafea", name: "Caffè latte", description: "espresso, lapte cald", price: 14, image: "/menu/046.jpg" },
   { code: "047", category: "bauturi", subcategory: "Cafea", name: "Caffè frappe", description: "cafea rece, spumă, gheață", price: 17, image: "/menu/047.jpg" },
-  { code: "048", category: "bauturi", subcategory: "Răcoritoare", name: "Pepsi (250ml)", description: "răcoritoare la sticlă", price: 10 },
-  { code: "049", category: "bauturi", subcategory: "Răcoritoare", name: "Mirinda portocale (250ml)", description: "răcoritoare la sticlă", price: 10 },
-  { code: "050", category: "bauturi", subcategory: "Răcoritoare", name: "7Up (250ml)", description: "răcoritoare la sticlă", price: 10 },
-  { code: "051", category: "bauturi", subcategory: "Răcoritoare", name: "Apă plată (330ml)", description: "apă plată", price: 8 },
-  { code: "052", category: "bauturi", subcategory: "Răcoritoare", name: "Lipton ice tea (250ml)", description: "ceai rece", price: 11 },
+  { code: "048", category: "bauturi", subcategory: "Răcoritoare", name: "Pepsi (250ml)", description: "răcoritoare la sticlă", price: 10, image: "/menu/048.jpg" },
+  { code: "049", category: "bauturi", subcategory: "Răcoritoare", name: "Mirinda portocale (250ml)", description: "răcoritoare la sticlă", price: 10, image: "/menu/049.jpg" },
+  { code: "050", category: "bauturi", subcategory: "Răcoritoare", name: "7Up (250ml)", description: "răcoritoare la sticlă", price: 10, image: "/menu/050.jpg" },
+  { code: "051", category: "bauturi", subcategory: "Răcoritoare", name: "Apă plată (330ml)", description: "apă plată", price: 8, image: "/menu/051.jpg" },
+  { code: "052", category: "bauturi", subcategory: "Răcoritoare", name: "Lipton ice tea (250ml)", description: "ceai rece", price: 11, image: "/menu/052.jpg" },
   { code: "053", category: "bauturi", subcategory: "Răcoritoare", name: "Fresh de portocale (400ml)", description: "suc proaspăt de portocale", price: 24 },
 ];
 
