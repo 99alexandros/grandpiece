@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 const categoryPhoto: Record<string, string> = {
   antipasti: "/menu/005.jpg",
   principali: "/menu/011.jpg",
-  paste: "/menu/014.jpg",
-  pizza: "/menu/019.jpg",
-  desert: "/menu/030.jpg",
+  paste: "/menu/018.jpg",
+  pizza: "/menu/026.jpg",
+  desert: "/menu/031.jpg",
   bauturi: "/menu/035.jpg",
 };
 
