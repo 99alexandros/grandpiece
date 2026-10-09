@@ -60,7 +60,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav aria-label="Navigare principală" className="hidden items-center gap-9 lg:flex">
+        <nav aria-label="Navigare principală" className="hidden items-center gap-6 lg:flex xl:gap-9">
           {navLinks.map((l) => (
             <Link
               key={l.href}

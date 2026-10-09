@@ -17,6 +17,7 @@ npm run lint
 |---|---|
 | Nume, adresă, telefon, e-mail, program, Instagram, coordonate | `src/data/site.ts` |
 | Meniul (preparate, prețuri, etichete) | `src/data/menu.ts` |
+| Ofertele (zilnice și de sărbători) | `src/data/offers.ts` (pozele în `public/offers/`) |
 | Echipa | `src/data/team.ts` |
 | Pozele din galerie | `src/data/gallery.ts` |
 | Textele din Hero, introducere, „Povestea noastră”, motto | `src/data/copy.ts` |

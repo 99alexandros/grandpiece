@@ -38,6 +38,7 @@ export const site = {
 export const navLinks = [
   { href: "/", label: "Acasă" },
   { href: "/meniu", label: "Meniu" },
+  { href: "/oferte", label: "Oferte" },
   { href: "/despre-noi", label: "Despre noi" },
   { href: "/galerie", label: "Galerie" },
   { href: "/contact", label: "Contact" },
