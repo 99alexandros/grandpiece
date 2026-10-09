@@ -77,7 +77,7 @@ export const dishes: Dish[] = [
   { code: "050", category: "bauturi", subcategory: "Răcoritoare", name: "7Up (250ml)", description: "răcoritoare la sticlă", price: 10, image: "/menu/050.jpg" },
   { code: "051", category: "bauturi", subcategory: "Răcoritoare", name: "Apă plată (330ml)", description: "apă plată", price: 8, image: "/menu/051.jpg" },
   { code: "052", category: "bauturi", subcategory: "Răcoritoare", name: "Lipton ice tea (250ml)", description: "ceai rece", price: 11, image: "/menu/052.jpg" },
-  { code: "053", category: "bauturi", subcategory: "Răcoritoare", name: "Fresh de portocale (400ml)", description: "suc proaspăt de portocale", price: 24, image: "/menu/053.jpg" },
+  { code: "053", category: "bauturi", subcategory: "Răcoritoare", name: "Fresh de portocale (400ml)", description: "suc proaspăt de portocale", price: 24, image: "/menu/053-v2.jpg" },
 ];
 
 // „Preparate recomandate” de pe prima pagină – codurile produselor, în ordinea afișării.
