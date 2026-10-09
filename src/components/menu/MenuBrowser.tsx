@@ -31,13 +31,13 @@ function DishCard({ d, priority, as: Heading }: { d: Dish; priority?: boolean; a
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         )}
-        <span className="absolute bottom-0 left-0 bg-brand px-4 py-2 font-serif text-lg font-semibold text-on-brand">
+        <span className="absolute bottom-0 left-0 bg-brand px-2.5 py-1 font-serif text-sm font-semibold text-on-brand sm:px-4 sm:py-2 sm:text-lg">
           {formatPrice(d.price)}
         </span>
       </div>
-      <div className="flex flex-1 flex-col p-5">
-        <Heading className="font-serif text-xl font-semibold leading-snug text-pine">{d.name}</Heading>
-        <p className="mt-2 text-[0.95rem] leading-relaxed text-ink/85 first-letter:uppercase">{d.description}</p>
+      <div className="flex flex-1 flex-col p-3 sm:p-5">
+        <Heading className="font-serif text-[0.95rem] font-semibold leading-snug text-pine sm:text-xl">{d.name}</Heading>
+        <p className="mt-1.5 text-[0.78rem] leading-snug text-ink/85 first-letter:uppercase sm:mt-2 sm:text-[0.95rem] sm:leading-relaxed">{d.description}</p>
       </div>
     </li>
   );
@@ -113,7 +113,7 @@ export default function MenuBrowser() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl space-y-24 px-5 py-16 sm:px-8 lg:py-20" aria-live="polite">
+      <div className="mx-auto max-w-6xl space-y-16 px-4 py-10 sm:space-y-24 sm:px-8 sm:py-16 lg:py-20" aria-live="polite">
         {visibleCategories.map((cat, catIndex) => {
           const groups = groupBySubcategory(dishes.filter((d) => d.category === cat.id));
           return (
@@ -125,7 +125,7 @@ export default function MenuBrowser() {
                 <div className="ornament mt-5 justify-center text-brand" aria-hidden="true">◆</div>
               </div>
 
-              <div className="mt-12 space-y-14">
+              <div className="mt-8 space-y-10 sm:mt-12 sm:space-y-14">
                 {groups.map((g) => {
                   const withPhoto = g.items.filter((d) => d.image);
                   const plain = g.items.filter((d) => !d.image);
@@ -138,7 +138,7 @@ export default function MenuBrowser() {
                         </h3>
                       )}
                       {withPhoto.length > 0 && (
-                        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <ul className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3">
                           {withPhoto.map((d, i) => (
                             <DishCard
                               key={d.code}

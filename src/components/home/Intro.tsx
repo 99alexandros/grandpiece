@@ -7,9 +7,9 @@ import { copy } from "@/data/copy";
 
 export default function Intro() {
   return (
-    <section id="intro" className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:py-32">
+    <section id="intro" className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-20 lg:py-32">
       <Reveal>
-        <div className="relative mx-auto aspect-square w-full max-w-md lg:max-w-none">
+        <div className="relative mx-auto aspect-[4/3] w-full max-w-md sm:aspect-square lg:max-w-none">
           <div className="absolute -inset-2 translate-x-2 translate-y-2 sm:-inset-3 sm:translate-x-3 sm:translate-y-3 border border-brand" aria-hidden="true" />
           <SafeImage
             src={images.intro}

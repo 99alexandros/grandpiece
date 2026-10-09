@@ -85,7 +85,7 @@ export default function OffersBrowser() {
           ))}
         </ul>
 
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center sm:mt-16">
           <p className="mb-6 font-display text-2xl italic text-pine">Pentru multe dintre oferte se recomandă rezervarea.</p>
           <ButtonLink href="/rezervari" variant="wine">Rezervă o masă</ButtonLink>
         </div>

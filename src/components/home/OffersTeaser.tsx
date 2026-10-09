@@ -6,14 +6,14 @@ import { homeOffers } from "@/data/offers";
 
 export default function OffersTeaser() {
   return (
-    <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32" aria-labelledby="offers-title">
+    <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24 lg:py-32" aria-labelledby="offers-title">
       <Reveal>
         <div id="offers-title">
           <SectionTitle eyebrow="Avantaje" title="Oferte pentru tine" />
         </div>
       </Reveal>
 
-      <ul className="mt-16 grid gap-6 md:grid-cols-3">
+      <ul className="mt-10 grid gap-5 sm:mt-16 sm:gap-6 md:grid-cols-3">
         {homeOffers.map((offer, i) => (
           <Reveal as="li" key={offer.id} delay={i * 120}>
             <article className="group flex h-full flex-col overflow-hidden border border-pine/10 bg-white shadow-sm shadow-black/5 transition-shadow duration-300 hover:shadow-lg hover:shadow-black/10">

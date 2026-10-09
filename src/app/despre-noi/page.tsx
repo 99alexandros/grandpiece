@@ -30,7 +30,7 @@ export default function AboutPage() {
     <>
       <PageHeader eyebrow="Despre noi" title="Povestea Grand Piece" />
 
-      <section className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:gap-20">
+      <section className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <div className="space-y-6 text-lg leading-relaxed text-ink/90">
             <h2 className="font-serif text-4xl text-pine">{copy.about.title}</h2>
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="py-24" aria-labelledby="values-title">
+      <section className="py-16 sm:py-24" aria-labelledby="values-title">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
             <div id="values-title">
@@ -88,7 +88,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-pine py-24 lg:py-28" aria-labelledby="vision-title">
+      <section className="bg-pine py-16 sm:py-24 lg:py-28" aria-labelledby="vision-title">
         <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1px_1fr] lg:gap-16">
           <Reveal>
             <p id="vision-title" className="text-[0.75rem] font-medium uppercase tracking-[0.35em] text-sand">
@@ -112,7 +112,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-24 sm:px-8" aria-labelledby="menu-glance-title">
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24" aria-labelledby="menu-glance-title">
         <Reveal>
           <div id="menu-glance-title">
             <SectionTitle eyebrow="Din meniu" title="Ce găsești la noi" />
@@ -140,7 +140,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <section className="px-5 py-24 text-center">
+      <section className="px-5 py-16 text-center sm:py-24">
         <Reveal>
           <p className="font-display text-3xl italic text-pine sm:text-4xl">Vă așteptăm cu drag la masă.</p>
           <div className="mt-8">

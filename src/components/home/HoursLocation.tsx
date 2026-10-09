@@ -5,7 +5,7 @@ import { mapEmbedUrl, mapLinkUrl, site } from "@/data/site";
 
 export default function HoursLocation() {
   return (
-    <section className="bg-cream-deep py-24 lg:py-32" aria-labelledby="hours-title">
+    <section className="bg-cream-deep py-16 sm:py-24 lg:py-32" aria-labelledby="hours-title">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div id="hours-title">
@@ -13,7 +13,7 @@ export default function HoursLocation() {
           </div>
         </Reveal>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-2">
+        <div className="mt-10 grid gap-8 sm:mt-16 sm:gap-12 lg:grid-cols-2">
           <Reveal>
             <div className="h-full border border-brand/50 bg-cream p-6 sm:p-12">
               <h3 className="font-serif text-3xl text-pine">Program</h3>
