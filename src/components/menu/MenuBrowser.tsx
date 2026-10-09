@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { categories, dishes, formatPrice, type Category, type Dish } from "@/data/menu";
 
 type Filter = Category | "all";
@@ -56,14 +56,31 @@ function DishLine({ d, as: Heading }: { d: Dish; as: "h3" | "h4" }) {
   );
 }
 
+const subscribeHash = (cb: () => void) => {
+  window.addEventListener("hashchange", cb);
+  return () => window.removeEventListener("hashchange", cb);
+};
+const getHash = () => window.location.hash.slice(1);
+const getServerHash = () => "";
+
 export default function MenuBrowser() {
-  const [active, setActive] = useState<Filter>("all");
+  // Linkurile de tip /meniu#pizza deschid direct categoria respectivă.
+  const hash = useSyncExternalStore(subscribeHash, getHash, getServerHash);
+  const hashFilter = categories.find((c) => c.id === hash)?.id;
+  const [picked, setPicked] = useState<Filter | null>(null);
+  const active: Filter = picked ?? hashFilter ?? "all";
+  const setActive = setPicked;
+
+  useEffect(() => {
+    if (hashFilter) document.getElementById("menu-filters")?.scrollIntoView({ block: "start" });
+  }, [hashFilter]);
+
   const tabs: { id: Filter; label: string }[] = [{ id: "all", label: "Toate" }, ...categories];
   const visibleCategories = categories.filter((c) => active === "all" || c.id === active);
 
   return (
     <div>
-      <div className="sticky top-20 z-30 border-b border-pine/10 bg-cream/95 backdrop-blur">
+      <div id="menu-filters" className="sticky top-20 z-30 border-b border-pine/10 bg-cream/95 backdrop-blur">
         <div
           role="group"
           aria-label="Filtrează meniul pe categorii"

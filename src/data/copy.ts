@@ -34,8 +34,21 @@ export const copy = {
   about: {
     title: "Povestea noastră",
     text: [
-      "Grand Piece este un loc de întâlnire în care mâncarea și băuturile sunt împărtășite cu familia, colegii și prietenii și unde bucătarii noștri experți creează interpretări moderne ale rețetelor clasice italienești.",
-      "Folosim cele mai bune ingrediente pentru a ne asigura că oaspeții noștri experimentează adevăratele arome ale Italiei. Meniul nostru include o varietate de mâncăruri italienești, iar spațiul nostru este perfect pentru a împărtăși povești și mâncare bună și pentru a-ți aduce oamenii preferați împreună.",
+      "Povestea Grand Piece a început în toamna anului 2022, când chef Daria Constantinică, după zece ani în bucătăria faimosului restaurant La Pergola din Roma, alături de chef Heinz Beck, și-a propus să aducă în Timișoara gustul autentic italienesc.",
+      "GRAND PIECE este locul în care rafinamentul italian întâlnește pasiunea pentru gastronomie. Am creat restaurantul din dorința de a oferi oaspeților preparate inspirate din bucătăria italiană, într-un ambient elegant și primitor. Fiecare detaliu este ales cu grijă pentru ca o simplă masă să devină un moment de savurat.",
     ],
+  },
+  facts: [
+    { value: "2022", label: "Toamna în care a început povestea" },
+    { value: "10 ani", label: "Experiența chef-ului în bucătăria La Pergola, Roma" },
+  ],
+  vision: {
+    eyebrow: "Viziunea noastră",
+    quote:
+      "Să aducem esența Italiei la fiecare masă, prin preparate autentice, ingrediente alese cu grijă și o atmosferă elegantă, în care fiecare vizită devine o experiență memorabilă.",
+  },
+  mission: {
+    eyebrow: "Misiunea noastră",
+    text: "Misiunea GRAND PIECE este de a transforma fiecare vizită într-o experiență aparte. Punem accent pe prospețime, calitate și atenție la detalii, păstrând spiritul bucătăriei italiene și respectul pentru gustul autentic.",
   },
 };

@@ -6,7 +6,7 @@ import ButtonLink from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
-import { categories } from "@/data/menu";
+import { categories, dishes } from "@/data/menu";
 import { copy } from "@/data/copy";
 import { images } from "@/data/images";
 
@@ -53,7 +53,21 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="bg-cream-deep py-24" aria-labelledby="values-title">
+      <section className="border-y border-brand/30 bg-cream-deep" aria-label="Repere">
+        <ul className="mx-auto grid max-w-6xl divide-y divide-brand/20 px-5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:px-8">
+          {[
+            ...copy.facts,
+            { value: String(dishes.length), label: "Preparate și băuturi în meniu" },
+          ].map((f) => (
+            <li key={f.label} className="px-4 py-8 text-center">
+              <p className="font-serif text-4xl font-semibold text-brand">{f.value}</p>
+              <p className="mx-auto mt-2 max-w-[16rem] text-sm leading-snug text-ink/85">{f.label}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="py-24" aria-labelledby="values-title">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
             <div id="values-title">
@@ -74,6 +88,26 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="bg-pine py-24 lg:py-28" aria-labelledby="vision-title">
+        <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[1.3fr_1px_1fr] lg:gap-16">
+          <Reveal>
+            <p id="vision-title" className="text-[0.75rem] font-medium uppercase tracking-[0.35em] text-sand">
+              {copy.vision.eyebrow}
+            </p>
+            <blockquote className="mt-6 font-display text-3xl italic leading-snug text-bone sm:text-4xl">
+              <span className="text-brand" aria-hidden="true">„</span>
+              {copy.vision.quote}
+              <span className="text-brand" aria-hidden="true">”</span>
+            </blockquote>
+          </Reveal>
+          <div className="hidden bg-bone/20 lg:block" aria-hidden="true" />
+          <Reveal delay={150}>
+            <p className="text-[0.75rem] font-medium uppercase tracking-[0.35em] text-sand">{copy.mission.eyebrow}</p>
+            <p className="mt-6 text-lg leading-relaxed text-bone/90">{copy.mission.text}</p>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-5 py-24 sm:px-8" aria-labelledby="menu-glance-title">
         <Reveal>
           <div id="menu-glance-title">
@@ -83,7 +117,7 @@ export default function AboutPage() {
         <ul className="mt-14 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3">
           {categories.map((c, i) => (
             <Reveal as="li" key={c.id} delay={(i % 3) * 100}>
-              <Link href="/meniu" className="group relative block aspect-[4/3] overflow-hidden bg-pine">
+              <Link href={`/meniu#${c.id}`} className="group relative block aspect-[4/3] overflow-hidden bg-pine">
                 <Image
                   src={categoryPhoto[c.id]}
                   alt=""
@@ -95,7 +129,7 @@ export default function AboutPage() {
                 <span className="absolute inset-x-0 bottom-0 p-4 font-serif text-xl font-semibold text-bone sm:text-2xl">
                   {c.label}
                 </span>
-                <span className="sr-only"> – vezi meniul</span>
+                <span className="sr-only"> – vezi categoria în meniu</span>
               </Link>
             </Reveal>
           ))}
