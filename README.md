@@ -36,12 +36,12 @@ Meniul a fost preluat din catalogul Grand Piece (53 de produse, cu prețuri în 
   description: "mușchi de vită feliat, rucola, roșii cherry, parmezan",
   price: 109,                           // în lei (RON)
   image: "/menu/007.jpg",               // opțional
-  featured: true,                       // opțional – apare în „Preparate recomandate” pe prima pagină
 }
 ```
 
 - Pentru a **adăuga** un produs, copiază un obiect și modifică-l; pentru a-l **șterge**, elimină obiectul.
 - Ordinea din fișier este ordinea afișată pe site.
+- „Preparate recomandate” de pe prima pagină se aleg din lista `featuredCodes` (codurile produselor), din același fișier.
 - Numele categoriilor se schimbă în lista `categories`.
 
 ## Logo și culori
