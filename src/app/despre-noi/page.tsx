@@ -1,29 +1,16 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import PageHeader from "@/components/ui/PageHeader";
-import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 import ButtonLink from "@/components/ui/Button";
 import { copy } from "@/data/copy";
 import { images } from "@/data/images";
-import { team, type Member } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "Despre noi",
-  description: "Povestea restaurantului Grand Piece și echipa care vă întâmpină în Timișoara.",
+  description: "Povestea restaurantului Grand Piece din Timișoara: mâncare italiană împărtășită cu familia și prietenii.",
   alternates: { canonical: "/despre-noi" },
 };
-
-function MemberCard({ member, large }: { member: Member; large?: boolean }) {
-  return (
-    <article
-      className={`border border-sand/30 bg-pine-soft/40 px-6 text-center ${large ? "w-full max-w-sm py-10" : "py-7"}`}
-    >
-      <p className={`font-serif text-bone ${large ? "text-4xl" : "text-2xl"}`}>{member.name}</p>
-      <p className="mt-2 text-[0.72rem] uppercase tracking-[0.3em] text-sand">{member.role}</p>
-    </article>
-  );
-}
 
 export default function AboutPage() {
   return (
@@ -42,50 +29,15 @@ export default function AboutPage() {
         <Reveal delay={150}>
           <div className="relative aspect-[4/3] w-full">
             <div className="absolute -inset-3 -translate-x-3 translate-y-3 border border-brand" aria-hidden="true" />
-            <Image
+            <SafeImage
               src={images.about}
-              alt="Fritto misto, specialitate Grand Piece"
+              alt="Masă elegantă pregătită pentru oaspeți"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
             />
           </div>
         </Reveal>
-      </section>
-
-      <section className="bg-pine py-24" aria-labelledby="team-title">
-        <div className="mx-auto max-w-5xl px-5 sm:px-8">
-          <Reveal>
-            <div id="team-title">
-              <SectionTitle eyebrow="Oamenii noștri" title="Echipa Grand Piece" light />
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="mt-16 flex justify-center">
-              <MemberCard member={team.lead} large />
-            </div>
-          </Reveal>
-
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <Reveal>
-              <h3 className="mb-6 text-center text-[0.75rem] uppercase tracking-[0.35em] text-sand">Administrație și sală</h3>
-              <ul className="grid gap-4 sm:grid-cols-2">
-                {team.staff.map((m) => (
-                  <li key={m.name}><MemberCard member={m} /></li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={120}>
-              <h3 className="mb-6 text-center text-[0.75rem] uppercase tracking-[0.35em] text-sand">Bucătărie</h3>
-              <ul className="grid gap-4 sm:grid-cols-2">
-                {team.kitchen.map((m, i) => (
-                  <li key={m.name} className={i === 0 ? "sm:col-span-2" : ""}><MemberCard member={m} /></li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
-        </div>
       </section>
 
       <section className="px-5 py-24 text-center">
