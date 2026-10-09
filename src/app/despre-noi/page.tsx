@@ -103,7 +103,7 @@ export default function AboutPage() {
           <div className="hidden bg-bone/20 lg:block" aria-hidden="true" />
           <Reveal delay={150}>
             <p className="text-[0.75rem] font-medium uppercase tracking-[0.35em] text-sand">{copy.mission.eyebrow}</p>
-            <p className="mt-6 text-lg leading-relaxed text-bone/90">{copy.mission.text}</p>
+            <p className="mt-6 font-display text-2xl italic leading-snug text-bone sm:text-3xl">{copy.mission.text}</p>
           </Reveal>
         </div>
       </section>
