@@ -1,4 +1,4 @@
-import Image from "next/image";
+import SafeImage from "@/components/ui/SafeImage";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Reveal from "@/components/ui/Reveal";
 import ButtonLink from "@/components/ui/Button";
@@ -11,9 +11,9 @@ export default function Intro() {
       <Reveal>
         <div className="relative mx-auto aspect-square w-full max-w-md lg:max-w-none">
           <div className="absolute -inset-3 translate-x-3 translate-y-3 border border-brand" aria-hidden="true" />
-          <Image
+          <SafeImage
             src={images.intro}
-            alt="Orata alla griglia, dorada la grătar"
+            alt="Paste italienești proaspete, cu roșii și busuioc"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="object-cover"
