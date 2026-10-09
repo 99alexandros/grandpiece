@@ -34,7 +34,7 @@ export default function FeaturedDishes() {
                   <h3 className="font-serif text-2xl text-bone">{dish.name}</h3>
                   <span className="whitespace-nowrap font-serif text-xl text-sand">{formatPrice(dish.price)}</span>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-bone/70 first-letter:uppercase">{dish.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-bone/85 first-letter:uppercase">{dish.description}</p>
               </article>
             </Reveal>
           ))}

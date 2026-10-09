@@ -131,7 +131,7 @@ export default function GalleryGrid() {
               {current.alt} – imaginea {index + 1} din {n}
             </figcaption>
           </figure>
-          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm tracking-widest text-bone/70" aria-hidden="true">
+          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm tracking-widest text-bone/85" aria-hidden="true">
             {index + 1} / {n}
           </p>
         </div>

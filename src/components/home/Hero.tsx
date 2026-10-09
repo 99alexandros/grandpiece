@@ -31,7 +31,7 @@ export default function Hero() {
           />
         </h1>
         <div className="ornament mt-2 justify-center text-sand" aria-hidden="true">◆</div>
-        <p className="mt-6 font-serif text-3xl italic text-bone sm:text-4xl">{copy.motto}</p>
+        <p className="mt-6 font-display text-3xl italic text-bone sm:text-4xl">{copy.motto}</p>
         <p className="mx-auto mt-4 max-w-xl text-base text-bone/85 sm:text-lg">{copy.hero.subtitle}</p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <ButtonLink href="/rezervari">{copy.hero.cta}</ButtonLink>

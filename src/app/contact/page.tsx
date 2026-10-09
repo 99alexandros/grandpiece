@@ -36,7 +36,7 @@ export default function ContactPage() {
               <dl className="mt-3 divide-y divide-brand/30 border-y border-brand/30">
                 {site.hours.map((h) => (
                   <div key={h.days} className="flex justify-between gap-4 py-3">
-                    <dt className="text-ink/75">{h.days}</dt>
+                    <dt className="text-ink/85">{h.days}</dt>
                     <dd className="font-serif text-xl text-pine">{h.label}</dd>
                   </div>
                 ))}

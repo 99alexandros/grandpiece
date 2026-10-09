@@ -23,7 +23,7 @@ export default function Intro() {
       <Reveal delay={150}>
         <div className="text-center lg:text-left">
           <SectionTitle eyebrow={copy.intro.eyebrow} title={copy.intro.title} align="left" />
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink/80">
+          <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink/90">
             {copy.intro.text.map((p, i) => (
               <p key={i}>{p}</p>
             ))}

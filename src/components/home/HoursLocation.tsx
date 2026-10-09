@@ -20,13 +20,13 @@ export default function HoursLocation() {
               <dl className="mt-6 divide-y divide-brand/30">
                 {site.hours.map((h) => (
                   <div key={h.days} className="flex justify-between gap-6 py-4">
-                    <dt className="text-ink/80">{h.days}</dt>
+                    <dt className="text-ink/90">{h.days}</dt>
                     <dd className="font-serif text-xl text-pine">{h.label}</dd>
                   </div>
                 ))}
               </dl>
               <h3 className="mt-10 font-serif text-3xl text-pine">Adresă</h3>
-              <address className="mt-4 not-italic leading-relaxed text-ink/80">
+              <address className="mt-4 not-italic leading-relaxed text-ink/90">
                 {site.address.street}
                 <br />
                 {site.address.city}

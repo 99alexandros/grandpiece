@@ -86,11 +86,11 @@ export default function ReservationForm() {
       <div role="status" className="border border-brand bg-cream p-10 text-center sm:p-14">
         <p className="font-serif text-6xl text-brand" aria-hidden="true">✓</p>
         <h2 className="mt-4 font-serif text-4xl text-pine">Mulțumim, {confirmed.name.trim()}!</h2>
-        <p className="mx-auto mt-5 max-w-md text-lg text-ink/80">
+        <p className="mx-auto mt-5 max-w-md text-lg text-ink/90">
           Am primit cererea dumneavoastră pentru {confirmed.guests}{" "}
           {Number(confirmed.guests) === 1 ? "persoană" : "persoane"}, {dateLabel}, la ora {confirmed.time}.
         </p>
-        <p className="mx-auto mt-3 max-w-md text-ink/70">
+        <p className="mx-auto mt-3 max-w-md text-ink/85">
           Vă vom contacta în scurt timp la numărul {confirmed.phone} pentru confirmare.
         </p>
         <button

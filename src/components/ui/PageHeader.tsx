@@ -5,7 +5,7 @@ export default function PageHeader({ eyebrow, title, intro }: { eyebrow: string;
   return (
     <header className="bg-pine px-4 pb-16 pt-36 text-center sm:pt-40">
       <SectionTitle eyebrow={eyebrow} title={title} light as="h1" />
-      {intro && <p className="mx-auto mt-6 max-w-xl text-bone/75">{intro}</p>}
+      {intro && <p className="mx-auto mt-6 max-w-xl text-bone/85">{intro}</p>}
     </header>
   );
 }

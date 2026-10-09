@@ -18,7 +18,7 @@ export default function ReservationsPage() {
         <aside className="space-y-8 lg:pt-4" aria-label="Informații utile">
           <div>
             <h2 className="font-serif text-3xl text-pine">Preferați telefonul?</h2>
-            <p className="mt-3 text-ink/75">Ne puteți suna oricând în timpul programului.</p>
+            <p className="mt-3 text-ink/85">Ne puteți suna oricând în timpul programului.</p>
             <a href={`tel:${site.phoneHref}`} className="mt-3 inline-block font-serif text-3xl text-wine hover:underline">
               {site.phone}
             </a>
@@ -28,7 +28,7 @@ export default function ReservationsPage() {
             <dl className="mt-3 divide-y divide-brand/30">
               {site.hours.map((h) => (
                 <div key={h.days} className="flex justify-between gap-4 py-3">
-                  <dt className="text-ink/75">{h.days}</dt>
+                  <dt className="text-ink/85">{h.days}</dt>
                   <dd className="font-medium text-pine">{h.label}</dd>
                 </div>
               ))}
@@ -36,7 +36,7 @@ export default function ReservationsPage() {
           </div>
           <div>
             <h2 className="font-serif text-3xl text-pine">Adresă</h2>
-            <address className="mt-3 not-italic text-ink/75">{site.address.full}</address>
+            <address className="mt-3 not-italic text-ink/85">{site.address.full}</address>
           </div>
         </aside>
       </div>

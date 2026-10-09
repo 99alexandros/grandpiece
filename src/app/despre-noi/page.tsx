@@ -19,7 +19,7 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <div className="space-y-6 text-lg leading-relaxed text-ink/80">
+          <div className="space-y-6 text-lg leading-relaxed text-ink/90">
             <h2 className="font-serif text-4xl text-pine">{copy.about.title}</h2>
             {copy.about.text.map((p, i) => (
               <p key={i}>{p}</p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
 
       <section className="px-5 py-24 text-center">
         <Reveal>
-          <p className="font-serif text-3xl italic text-pine sm:text-4xl">Vă așteptăm cu drag la masă.</p>
+          <p className="font-display text-3xl italic text-pine sm:text-4xl">Vă așteptăm cu drag la masă.</p>
           <div className="mt-8">
             <ButtonLink href="/rezervari" variant="wine">Rezervă o masă</ButtonLink>
           </div>

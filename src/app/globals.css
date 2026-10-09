@@ -22,7 +22,8 @@
   --color-wine: var(--wine);
   --color-ink: var(--ink);
   --color-bone: var(--bone);
-  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;
 }
 
@@ -36,6 +37,8 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
 :focus-visible {
