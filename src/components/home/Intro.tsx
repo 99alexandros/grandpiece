@@ -13,7 +13,7 @@ export default function Intro() {
           <div className="absolute -inset-3 translate-x-3 translate-y-3 border border-brand" aria-hidden="true" />
           <SafeImage
             src={images.intro}
-            alt="Paste italienești proaspete, cu roșii și busuioc"
+            alt="Pizza coaptă în cuptor cu lemne"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="object-cover"
