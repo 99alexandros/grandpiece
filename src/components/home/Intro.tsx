@@ -1,0 +1,38 @@
+import Image from "next/image";
+import SectionTitle from "@/components/ui/SectionTitle";
+import Reveal from "@/components/ui/Reveal";
+import ButtonLink from "@/components/ui/Button";
+import { images } from "@/data/images";
+import { copy } from "@/data/copy";
+
+export default function Intro() {
+  return (
+    <section id="intro" className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:py-32">
+      <Reveal>
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-md lg:max-w-none">
+          <div className="absolute -inset-3 translate-x-3 translate-y-3 border border-gold" aria-hidden="true" />
+          <Image
+            src={images.intro}
+            alt="Atmosferă caldă și elegantă în restaurantul Grand Piece"
+            fill
+            sizes="(min-width: 1024px) 40vw, 90vw"
+            className="object-cover"
+          />
+        </div>
+      </Reveal>
+      <Reveal delay={150}>
+        <div className="text-center lg:text-left">
+          <SectionTitle eyebrow={copy.intro.eyebrow} title={copy.intro.title} align="left" />
+          <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink/80">
+            {copy.intro.text.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+          <div className="mt-10">
+            <ButtonLink href="/despre-noi" variant="outline-dark">Descoperă povestea noastră</ButtonLink>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
