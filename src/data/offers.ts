@@ -149,3 +149,10 @@ export const holidayOffers: Offer[] = [
     image: "/offers/sarbatoare-8.jpg",
   },
 ];
+
+// Ofertele afișate pe prima pagină (id-urile din lista de mai sus).
+export const homeOfferIds = ["z1", "z3", "z7"];
+
+export const homeOffers = homeOfferIds
+  .map((id) => dailyOffers.find((o) => o.id === id))
+  .filter((o): o is Offer => Boolean(o));
