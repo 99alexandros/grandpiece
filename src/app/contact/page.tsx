@@ -70,7 +70,7 @@ export default function ContactPage() {
         </Reveal>
 
         <Reveal delay={150}>
-          <div className="min-h-[26rem] border border-brand/50 p-2 lg:h-full">
+          <div className="min-h-[26rem] overflow-hidden rounded-[var(--r)] border border-brand/50 p-2 lg:h-full">
             <iframe
               title={`Harta: ${site.address.full}`}
               src={mapEmbedUrl}

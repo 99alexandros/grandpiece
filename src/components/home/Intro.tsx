@@ -10,13 +10,13 @@ export default function Intro() {
     <section id="intro" className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:py-32">
       <Reveal>
         <div className="relative mx-auto aspect-square w-full max-w-md lg:max-w-none">
-          <div className="absolute -inset-2 translate-x-2 translate-y-2 sm:-inset-3 sm:translate-x-3 sm:translate-y-3 border border-brand" aria-hidden="true" />
+          <div className="absolute -inset-2 translate-x-2 translate-y-2 sm:-inset-3 sm:translate-x-3 sm:translate-y-3 border border-brand rounded-[var(--r)]" aria-hidden="true" />
           <SafeImage
             src={images.intro}
             alt="Masă la lumina lumânării, cu paste și vin alb"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
-            className="object-cover"
+            className="object-cover rounded-[var(--r)]"
           />
         </div>
       </Reveal>

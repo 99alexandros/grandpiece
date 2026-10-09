@@ -76,6 +76,6 @@ Formularul din `/rezervari` trimite datele către `src/app/api/rezervari/route.t
 5. Apasă **Deploy**. Fiecare `git push` pe `main` va republica site-ul.
 6. Pentru domeniu propriu: **Settings → Domains → Add**, apoi setează DNS-ul conform instrucțiunilor.
 
-## Previzualizare culori (temporar)
+## Previzualizare stiluri (temporar)
 
-În josul fiecărei pagini există un selector cu 3 palete (Actual / A · Noir & Auriu / B · Terra & Noapte). După ce alegi varianta, se șterg `src/components/layout/ThemePreview.tsx` și scriptul `gp-theme` din `src/app/layout.tsx`, iar valorile variantei alese se mută în blocul `:root` din `src/app/globals.css`.
+În josul fiecărei pagini există butonul „Stil: …” cu 5 variante (Actual, Trattoria rustică, Editorial de lux, Clasic roman, Bistro modern). După ce alegi varianta, se șterg `src/components/layout/ThemePreview.tsx`, scriptul `gp-theme` și fonturile suplimentare din `src/app/layout.tsx`, iar valorile variantei alese se mută în blocul `:root` din `src/app/globals.css`.

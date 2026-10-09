@@ -14,7 +14,7 @@ import { site } from "@/data/site";
 const empty: ReservationInput = { name: "", phone: "", date: "", time: "", guests: "2", notes: "" };
 
 const fieldCls =
-  "w-full border bg-cream px-4 py-3 text-ink placeholder:text-ink/40 transition-colors focus:border-brand";
+  "w-full rounded-[var(--r)] border bg-cream px-4 py-3 text-ink placeholder:text-ink/40 transition-colors focus:border-brand";
 
 function ErrorMsg({ errors, k }: { errors: ReservationErrors; k: keyof ReservationInput }) {
   if (!errors[k]) return null;
@@ -112,7 +112,7 @@ export default function ReservationForm() {
   const labelCls = "mb-2 block text-[0.75rem] font-medium uppercase tracking-[0.2em] text-pine";
 
   return (
-    <form onSubmit={onSubmit} noValidate className="border border-brand/60 bg-cream p-6 sm:p-10" aria-label="Formular de rezervare">
+    <form onSubmit={onSubmit} noValidate className="rounded-[var(--r)] border border-brand/60 bg-cream p-6 sm:p-10" aria-label="Formular de rezervare">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label htmlFor="f-name" className={labelCls}>Nume complet *</label>
@@ -195,7 +195,7 @@ export default function ReservationForm() {
 
       <button
         type="submit" disabled={status === "sending"}
-        className="mt-8 w-full bg-pine px-8 py-4 text-[0.8rem] font-medium uppercase tracking-[0.25em] text-bone transition-colors hover:bg-pine-soft disabled:opacity-60"
+        className="rounded-[var(--r-btn)] mt-8 w-full bg-pine px-8 py-4 text-[0.8rem] font-medium uppercase tracking-[0.25em] text-bone transition-colors hover:bg-pine-soft disabled:opacity-60"
       >
         {status === "sending" ? "Se trimite…" : "Trimite rezervarea"}
       </button>

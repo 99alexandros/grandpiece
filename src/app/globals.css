@@ -11,35 +11,88 @@
   --ink: #241e1a;
   --bone: #f6f1e6;
   --on-brand: #f6f1e6;
+  --heading-font: var(--font-playfair), Georgia, serif;
+  --body-font: var(--font-jost), system-ui, sans-serif;
+  --heading-case: none;
+  --heading-track: normal;
+  --r: 0px;
+  --r-btn: 0px;
 }
 
-/* ===== Variante de culori (previzualizare) – se aleg din butonul de jos al paginii ===== */
-/* Varianta A: Noir & Auriu */
-:root[data-theme="gold"] {
-  --cream: #f7f1e5;
-  --cream-deep: #ebe2d0;
-  --pine: #14100d;
-  --pine-soft: #241c16;
-  --brand: #94701f;
-  --sand: #e3c98a;
-  --wine: #6f5216;
-  --ink: #231d17;
-  --bone: #f8f2e4;
-  --on-brand: #fffaf0;
+/* ===== Variante de stil (previzualizare) – se aleg din butonul de jos al paginii ===== */
+/* 1 · Trattoria rustică */
+:root[data-theme="rustic"] {
+  --cream: #f6eedc;
+  --cream-deep: #ecdfc3;
+  --pine: #17130f;
+  --pine-soft: #2a221a;
+  --brand: #b8432f;
+  --sand: #efc89a;
+  --wine: #8c2f1f;
+  --ink: #2b221a;
+  --bone: #faf3e3;
+  --on-brand: #fff6ea;
+  --heading-font: var(--font-fraunces), Georgia, serif;
+  --body-font: var(--font-nunito), system-ui, sans-serif;
+  --r: 14px;
+  --r-btn: 999px;
 }
 
-/* Varianta B: Terra & Noapte */
-:root[data-theme="terra"] {
-  --cream: #f1ede4;
-  --cream-deep: #e4ded1;
-  --pine: #0c1620;
-  --pine-soft: #172633;
-  --brand: #b0502c;
-  --sand: #f1c9a6;
-  --wine: #8a3a1d;
-  --ink: #1c1a18;
-  --bone: #f6f1e6;
-  --on-brand: #fff7ee;
+/* 2 · Editorial de lux */
+:root[data-theme="editorial"] {
+  --cream: #f8f5ef;
+  --cream-deep: #ece6da;
+  --pine: #0b0b0b;
+  --pine-soft: #1a1a1a;
+  --brand: #8f6f3c;
+  --sand: #d8bd8a;
+  --wine: #5e4824;
+  --ink: #1a1a1a;
+  --bone: #f5f0e6;
+  --on-brand: #fbf6ea;
+  --heading-font: var(--font-bodoni), Georgia, serif;
+  --heading-track: 0.01em;
+}
+
+/* 3 · Clasic roman */
+:root[data-theme="roman"] {
+  --cream: #f3f1ec;
+  --cream-deep: #e5e1d8;
+  --pine: #120d0e;
+  --pine-soft: #231819;
+  --brand: #7d1f2c;
+  --sand: #e2c48a;
+  --wine: #5c1620;
+  --ink: #221b1b;
+  --bone: #f6f1e9;
+  --on-brand: #fbf3ea;
+  --heading-font: var(--font-cinzel), Georgia, serif;
+  --body-font: var(--font-lato), system-ui, sans-serif;
+  --heading-case: uppercase;
+  --heading-track: 0.05em;
+}
+
+/* 4 · Bistro modern */
+:root[data-theme="modern"] {
+  --cream: #ffffff;
+  --cream-deep: #f1f1ee;
+  --pine: #0a0a0a;
+  --pine-soft: #181818;
+  --brand: #1f6b45;
+  --sand: #a9d9bd;
+  --wine: #164f33;
+  --ink: #151515;
+  --bone: #f7f7f4;
+  --on-brand: #ffffff;
+  --heading-font: var(--font-outfit), system-ui, sans-serif;
+  --body-font: var(--font-dmsans), system-ui, sans-serif;
+  --r: 18px;
+  --r-btn: 999px;
+}
+
+h1, h2, h3, h4 {
+  text-transform: var(--heading-case);
+  letter-spacing: var(--heading-track);
 }
 
 @theme inline {
@@ -53,9 +106,9 @@
   --color-ink: var(--ink);
   --color-bone: var(--bone);
   --color-on-brand: var(--on-brand);
-  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-serif: var(--heading-font);
   --font-display: var(--font-cormorant), Georgia, serif;
-  --font-sans: var(--font-jost), system-ui, sans-serif;
+  --font-sans: var(--body-font);
 }
 
 html {

@@ -18,7 +18,7 @@ export default function FeaturedDishes() {
           {featuredDishes.map((dish, i) => (
             <Reveal as="li" key={dish.code} delay={i * 120}>
               <article className="group h-full">
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden rounded-[var(--r)]">
                   {dish.image && (
                     <Image
                       src={dish.image}

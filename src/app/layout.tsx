@@ -1,5 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Jost, Playfair_Display } from "next/font/google";
+import {
+  Bodoni_Moda,
+  Cinzel,
+  Cormorant_Garamond,
+  DM_Sans,
+  Fraunces,
+  Jost,
+  Lato,
+  Nunito_Sans,
+  Outfit,
+  Playfair_Display,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -22,6 +33,15 @@ const playfair = Playfair_Display({
   weight: ["500", "600", "700"],
   display: "swap",
 });
+
+// Fonturi pentru variantele de stil (previzualizare) – se șterg odată cu alegerea stilului.
+const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
+const nunito = Nunito_Sans({ variable: "--font-nunito", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
+const bodoni = Bodoni_Moda({ variable: "--font-bodoni", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
+const cinzel = Cinzel({ variable: "--font-cinzel", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
+const lato = Lato({ variable: "--font-lato", subsets: ["latin", "latin-ext"], display: "swap", preload: false, weight: ["400", "700"], });
+const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
+const dmsans = DM_Sans({ variable: "--font-dmsans", subsets: ["latin", "latin-ext"], display: "swap", preload: false, });
 
 const jost = Jost({
   variable: "--font-jost",
@@ -61,7 +81,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ro" suppressHydrationWarning className={`${cormorant.variable} ${jost.variable} ${playfair.variable}`}>
+    <html lang="ro" suppressHydrationWarning className={[cormorant, jost, playfair, fraunces, nunito, bodoni, cinzel, lato, outfit, dmsans].map((f) => f.variable).join(" ")}>
       <head>
         <script
           dangerouslySetInnerHTML={{
