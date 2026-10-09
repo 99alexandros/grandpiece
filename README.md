@@ -75,3 +75,7 @@ Formularul din `/rezervari` trimite datele către `src/app/api/rezervari/route.t
 4. În **Settings → Environment Variables** adaugă `NEXT_PUBLIC_SITE_URL` cu domeniul tău.
 5. Apasă **Deploy**. Fiecare `git push` pe `main` va republica site-ul.
 6. Pentru domeniu propriu: **Settings → Domains → Add**, apoi setează DNS-ul conform instrucțiunilor.
+
+## Previzualizare culori (temporar)
+
+În josul fiecărei pagini există un selector cu 3 palete (Actual / A · Noir & Auriu / B · Terra & Noapte). După ce alegi varianta, se șterg `src/components/layout/ThemePreview.tsx` și scriptul `gp-theme` din `src/app/layout.tsx`, iar valorile variantei alese se mută în blocul `:root` din `src/app/globals.css`.

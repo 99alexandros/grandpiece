@@ -30,7 +30,7 @@ function DishCard({ d }: { d: Dish }) {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         )}
-        <span className="absolute bottom-0 left-0 bg-brand px-4 py-2 font-serif text-lg font-semibold text-bone">
+        <span className="absolute bottom-0 left-0 bg-brand px-4 py-2 font-serif text-lg font-semibold text-on-brand">
           {formatPrice(d.price)}
         </span>
       </div>

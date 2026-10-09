@@ -10,6 +10,36 @@
   --wine: #8a1a25;
   --ink: #241e1a;
   --bone: #f6f1e6;
+  --on-brand: #f6f1e6;
+}
+
+/* ===== Variante de culori (previzualizare) – se aleg din butonul de jos al paginii ===== */
+/* Varianta A: Noir & Auriu */
+:root[data-theme="gold"] {
+  --cream: #f7f1e5;
+  --cream-deep: #ebe2d0;
+  --pine: #14100d;
+  --pine-soft: #241c16;
+  --brand: #94701f;
+  --sand: #e3c98a;
+  --wine: #6f5216;
+  --ink: #231d17;
+  --bone: #f8f2e4;
+  --on-brand: #fffaf0;
+}
+
+/* Varianta B: Terra & Noapte */
+:root[data-theme="terra"] {
+  --cream: #f1ede4;
+  --cream-deep: #e4ded1;
+  --pine: #0c1620;
+  --pine-soft: #172633;
+  --brand: #b0502c;
+  --sand: #f1c9a6;
+  --wine: #8a3a1d;
+  --ink: #1c1a18;
+  --bone: #f6f1e6;
+  --on-brand: #fff7ee;
 }
 
 @theme inline {
@@ -22,6 +52,7 @@
   --color-wine: var(--wine);
   --color-ink: var(--ink);
   --color-bone: var(--bone);
+  --color-on-brand: var(--on-brand);
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-display: var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;

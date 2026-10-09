@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Jost, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ThemePreview from "@/components/layout/ThemePreview";
 import { site } from "@/data/site";
 import { images } from "@/data/images";
 import { restaurantJsonLd } from "@/lib/schema";
@@ -60,7 +61,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ro" className={`${cormorant.variable} ${jost.variable} ${playfair.variable}`}>
+    <html lang="ro" suppressHydrationWarning className={`${cormorant.variable} ${jost.variable} ${playfair.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("gp-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="flex min-h-screen flex-col">
         <script
           type="application/ld+json"
@@ -70,7 +78,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <a
           href="#continut"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-brand focus:px-4 focus:py-2 focus:text-bone"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-brand focus:px-4 focus:py-2 focus:text-on-brand"
         >
           Sari la conținut
         </a>
@@ -79,6 +87,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <ThemePreview />
       </body>
     </html>
   );

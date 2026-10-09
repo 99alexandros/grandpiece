@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 type Variant = "brand" | "outline" | "outline-dark" | "wine";
 
 const variants: Record<Variant, string> = {
-  brand: "bg-brand text-bone hover:bg-wine border border-brand hover:border-wine",
-  wine: "bg-wine text-bone hover:bg-[#8a2a39] border border-wine",
+  brand: "bg-brand text-on-brand hover:bg-wine border border-brand hover:border-wine",
+  wine: "bg-wine text-on-brand hover:bg-brand border border-wine hover:border-brand",
   outline: "border border-bone/70 text-bone hover:bg-bone hover:text-pine",
   "outline-dark": "border border-pine text-pine hover:bg-pine hover:text-bone",
 };
