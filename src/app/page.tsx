@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Intro from "@/components/home/Intro";
 import FeaturedDishes from "@/components/home/FeaturedDishes";
-import Reviews from "@/components/home/Reviews";
 import HoursLocation from "@/components/home/HoursLocation";
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <Intro />
       <FeaturedDishes />
-      <Reviews />
       <HoursLocation />
     </>
   );

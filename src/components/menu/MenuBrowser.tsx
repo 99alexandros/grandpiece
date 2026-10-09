@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { categories, dishes, formatPrice, tagLabels, type Category, type Dish } from "@/data/menu";
+import { categories, dishes, formatPrice, type Category, type Dish } from "@/data/menu";
 
 type Filter = Category | "all";
 
@@ -40,24 +40,6 @@ function DishRow({ d }: { d: Dish }) {
           </span>
         </div>
         <p className="mt-1 text-ink/70 first-letter:uppercase">{d.description}</p>
-        {d.tags.length > 0 && (
-          <ul className="mt-2.5 flex flex-wrap gap-2" aria-label="Etichete">
-            {d.tags.map((t) => (
-              <li
-                key={t}
-                className={`border px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] ${
-                  t === "picant"
-                    ? "border-wine/50 text-wine"
-                    : t === "specialitatea-casei"
-                      ? "border-brand bg-brand/10 text-pine"
-                      : "border-pine/30 text-pine/80"
-                }`}
-              >
-                {tagLabels[t]}
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </li>
   );

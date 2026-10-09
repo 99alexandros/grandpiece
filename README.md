@@ -17,7 +17,6 @@ npm run lint
 |---|---|
 | Nume, adresă, telefon, e-mail, program, Instagram, coordonate | `src/data/site.ts` |
 | Meniul (preparate, prețuri, etichete) | `src/data/menu.ts` |
-| Recenzii | `src/data/reviews.ts` |
 | Echipa | `src/data/team.ts` |
 | Pozele din galerie | `src/data/gallery.ts` |
 | Textele din Hero, introducere, „Povestea noastră”, motto | `src/data/copy.ts` |
@@ -36,7 +35,6 @@ Meniul a fost preluat din catalogul Grand Piece (53 de produse, cu prețuri în 
   name: "Tagliata di manzo",
   description: "mușchi de vită feliat, rucola, roșii cherry, parmezan",
   price: 109,                           // în lei (RON)
-  tags: ["picant"],                     // vegetarian | vegan | picant | fara-gluten | specialitatea-casei
   image: "/menu/007.jpg",               // opțional
   featured: true,                       // opțional – apare în „Preparate recomandate” pe prima pagină
 }
@@ -45,7 +43,6 @@ Meniul a fost preluat din catalogul Grand Piece (53 de produse, cu prețuri în 
 - Pentru a **adăuga** un produs, copiază un obiect și modifică-l; pentru a-l **șterge**, elimină obiectul.
 - Ordinea din fișier este ordinea afișată pe site.
 - Numele categoriilor se schimbă în lista `categories`.
-- Etichetele (vegetarian, picant etc.) trebuie verificate de restaurant – cele existente sunt orientative.
 
 ## Logo și culori
 

@@ -2,10 +2,14 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { galleryImages } from "@/data/gallery";
+import { galleryImages as allImages } from "@/data/gallery";
 
 export default function GalleryGrid() {
   const [index, setIndex] = useState<number | null>(null);
+  // Pozele care nu se încarcă sunt ascunse, ca să nu apară casete goale.
+  const [failed, setFailed] = useState<Set<string>>(new Set());
+  const galleryImages = allImages.filter((g) => !failed.has(g.src));
+  const markFailed = (src: string) => setFailed((f) => new Set(f).add(src));
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const closeRef = useRef<HTMLButtonElement | null>(null);
   const n = galleryImages.length;
@@ -70,6 +74,7 @@ export default function GalleryGrid() {
                 width={img.width}
                 height={img.height}
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                onError={() => markFailed(img.src)}
                 className="h-auto w-full transition-transform duration-700 group-hover:scale-105"
               />
               <span className="absolute inset-0 bg-pine/0 transition-colors duration-500 group-hover:bg-pine/30" aria-hidden="true" />
