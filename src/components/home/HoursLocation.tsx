@@ -15,13 +15,13 @@ export default function HoursLocation() {
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="h-full border border-brand/50 bg-cream p-8 sm:p-12">
+            <div className="h-full border border-brand/50 bg-cream p-6 sm:p-12">
               <h3 className="font-serif text-3xl text-pine">Program</h3>
               <dl className="mt-6 divide-y divide-brand/30">
                 {site.hours.map((h) => (
                   <div key={h.days} className="flex justify-between gap-6 py-4">
                     <dt className="text-ink/90">{h.days}</dt>
-                    <dd className="font-serif text-xl text-pine">{h.label}</dd>
+                    <dd className="whitespace-nowrap font-serif text-lg text-pine sm:text-xl">{h.label}</dd>
                   </div>
                 ))}
               </dl>

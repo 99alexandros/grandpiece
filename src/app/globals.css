@@ -28,11 +28,13 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 }
 
 body {
+  overflow-x: clip;
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-sans);

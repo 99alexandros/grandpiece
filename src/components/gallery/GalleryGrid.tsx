@@ -56,7 +56,7 @@ export default function GalleryGrid() {
 
   return (
     <>
-      <ul className="mx-auto max-w-7xl columns-1 gap-4 px-5 py-16 sm:columns-2 sm:px-8 lg:columns-3 lg:py-24 [&>li]:mb-4">
+      <ul className="mx-auto max-w-7xl columns-2 gap-3 px-4 py-12 sm:gap-4 sm:px-8 lg:columns-3 lg:py-24 [&>li]:mb-3 sm:[&>li]:mb-4">
         {galleryImages.map((img, i) => (
           <li key={i} className="break-inside-avoid">
             <button
@@ -73,7 +73,7 @@ export default function GalleryGrid() {
                 alt={img.alt}
                 width={img.width}
                 height={img.height}
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 33vw, 50vw"
                 onError={() => markFailed(img.src)}
                 className="h-auto w-full transition-transform duration-700 group-hover:scale-105"
               />

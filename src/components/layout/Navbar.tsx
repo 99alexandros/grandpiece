@@ -35,6 +35,7 @@ export default function Navbar() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         solid ? "bg-pine/95 py-3 shadow-lg shadow-black/20 backdrop-blur" : "bg-gradient-to-b from-black/70 to-transparent py-5"
@@ -101,10 +102,11 @@ export default function Navbar() {
           </span>
         </button>
       </div>
+    </header>
 
       <div
         id="mobile-menu"
-        className={`fixed inset-0 -z-10 flex flex-col items-center justify-center bg-pine transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-pine transition-all duration-500 lg:hidden ${
           open ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
@@ -132,6 +134,6 @@ export default function Navbar() {
         </nav>
         <p className="mt-12 text-sm text-bone/60">{site.phone}</p>
       </div>
-    </header>
+    </>
   );
 }
