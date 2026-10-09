@@ -16,18 +16,22 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-pine/80 via-pine/55 to-pine/90" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6 pt-20 text-center">
-        <p className="text-[0.75rem] font-medium uppercase tracking-[0.4em] text-gold-soft sm:text-sm">
-          {copy.hero.eyebrow}
-        </p>
-        <h1 className="mt-6 font-serif text-6xl font-medium leading-none text-bone sm:text-8xl lg:text-9xl">
-          {copy.hero.title}
+      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pt-24 text-center">
+        <h1>
+          <span className="sr-only">Grand Piece Restaurant – restaurant italian în Timișoara</span>
+          <Image
+            src={images.logoLight}
+            alt=""
+            width={852}
+            height={822}
+            priority
+            className="mx-auto h-auto w-[min(80vw,30rem)]"
+          />
         </h1>
-        <div className="ornament mt-8 justify-center" aria-hidden="true">◆</div>
-        <p className="mx-auto mt-8 max-w-xl font-serif text-xl italic text-bone/90 sm:text-2xl">
-          {copy.hero.subtitle}
-        </p>
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="ornament mt-2 justify-center text-sand" aria-hidden="true">◆</div>
+        <p className="mt-6 font-serif text-3xl italic text-bone sm:text-4xl">{copy.motto}</p>
+        <p className="mx-auto mt-4 max-w-xl text-base text-bone/85 sm:text-lg">{copy.hero.subtitle}</p>
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <ButtonLink href="/rezervari">{copy.hero.cta}</ButtonLink>
           <ButtonLink href="/meniu" variant="outline">{copy.hero.ctaSecondary}</ButtonLink>
         </div>
@@ -36,9 +40,9 @@ export default function Hero() {
       <a
         href="#intro"
         aria-label="Derulează în jos"
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-gold-soft"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-sand"
       >
-        <span className="block h-12 w-px bg-gradient-to-b from-gold-soft to-transparent" />
+        <span className="block h-12 w-px bg-gradient-to-b from-sand to-transparent" />
       </a>
     </section>
   );

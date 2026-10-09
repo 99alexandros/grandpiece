@@ -25,7 +25,7 @@ export default function ReservationsPage() {
           </div>
           <div>
             <h2 className="font-serif text-3xl text-pine">Program</h2>
-            <dl className="mt-3 divide-y divide-gold/30">
+            <dl className="mt-3 divide-y divide-brand/30">
               {site.hours.map((h) => (
                 <div key={h.days} className="flex justify-between gap-4 py-3">
                   <dt className="text-ink/75">{h.days}</dt>

@@ -63,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <a
           href="#continut"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-gold focus:px-4 focus:py-2 focus:text-pine"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-brand focus:px-4 focus:py-2 focus:text-bone"
         >
           Sari la conținut
         </a>

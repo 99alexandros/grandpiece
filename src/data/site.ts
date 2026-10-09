@@ -3,7 +3,7 @@
 export const site = {
   name: "Grand Piece Restaurant",
   shortName: "Grand Piece",
-  tagline: "Restaurant italian · Timișoara",
+  tagline: "Sapore. Passione. Italia.",
   description:
     "Grand Piece Restaurant – restaurant italian elegant în Timișoara. Rezervă o masă și descoperă meniul nostru.",
   // Schimbă cu domeniul real după publicare (sau setează NEXT_PUBLIC_SITE_URL în Vercel).

@@ -12,7 +12,7 @@ export default function SectionTitle({ eyebrow, title, light, align = "center", 
       {eyebrow && (
         <p
           className={`mb-4 text-[0.75rem] font-medium uppercase tracking-[0.35em] ${
-            light ? "text-gold-soft" : "text-gold"
+            light ? "text-sand" : "text-brand"
           }`}
         >
           {eyebrow}
@@ -25,7 +25,7 @@ export default function SectionTitle({ eyebrow, title, light, align = "center", 
       >
         {title}
       </Tag>
-      {align === "center" && <div className="ornament mt-6 justify-center" aria-hidden="true">◆</div>}
+      {align === "center" && <div className={`ornament mt-6 justify-center ${light ? "text-sand" : "text-brand"}`} aria-hidden="true">◆</div>}
     </div>
   );
 }

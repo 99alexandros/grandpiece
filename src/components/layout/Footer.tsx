@@ -1,18 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks, site } from "@/data/site";
+import { images } from "@/data/images";
+import { copy } from "@/data/copy";
 
 export default function Footer() {
   return (
     <footer className="bg-pine text-bone/80">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-3">
         <div>
-          <p className="font-serif text-3xl text-bone">Grand Piece</p>
-          <p className="mt-1 text-[0.65rem] uppercase tracking-[0.45em] text-gold-soft">Ristorante</p>
-          <p className="mt-5 max-w-xs text-sm leading-relaxed">{site.tagline}</p>
-        </div>
+          <Image src={images.logoLight} alt="Grand Piece Restaurant" width={852} height={822} className="h-40 w-auto" />
+          <p className="mt-4 font-serif text-xl italic text-sand">{copy.motto}</p>
+          </div>
 
         <div>
-          <h2 className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.3em] text-gold-soft">Program</h2>
+          <h2 className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.3em] text-sand">Program</h2>
           <ul className="space-y-2 text-sm">
             {site.hours.map((h) => (
               <li key={h.days} className="flex justify-between gap-6 border-b border-bone/10 pb-2">
@@ -24,14 +26,14 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.3em] text-gold-soft">Contact</h2>
+          <h2 className="mb-5 text-[0.75rem] font-medium uppercase tracking-[0.3em] text-sand">Contact</h2>
           <address className="space-y-2 text-sm not-italic">
             <p>{site.address.full}</p>
             <p>
-              <a href={`tel:${site.phoneHref}`} className="hover:text-gold-soft">{site.phone}</a>
+              <a href={`tel:${site.phoneHref}`} className="hover:text-sand">{site.phone}</a>
             </p>
             <p>
-              <a href={`mailto:${site.email}`} className="hover:text-gold-soft">{site.email}</a>
+              <a href={`mailto:${site.email}`} className="hover:text-sand">{site.email}</a>
             </p>
             <p>
               <a
@@ -39,7 +41,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Instagram ${site.social.instagram.handle} (se deschide într-o filă nouă)`}
-                className="hover:text-gold-soft"
+                className="hover:text-sand"
               >
                 {site.social.instagram.handle}
               </a>
@@ -53,7 +55,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} {site.name}. Toate drepturile rezervate.</p>
           <nav aria-label="Navigare subsol" className="flex flex-wrap justify-center gap-5">
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-gold-soft">
+              <Link key={l.href} href={l.href} className="hover:text-sand">
                 {l.label}
               </Link>
             ))}

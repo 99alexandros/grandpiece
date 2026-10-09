@@ -1,15 +1,19 @@
-import { images } from "./images";
-
-// Echipa de probă – înlocuiește cu membrii reali.
+// Echipa Grand Piece (din catalog). Pentru poze: adaugă câmpul `image: "/images/nume.jpg"`.
 export interface Member {
   name: string;
   role: string;
-  bio: string;
-  image: string;
+  image?: string;
 }
 
-export const team: Member[] = [
-  { name: "Nume Prenume", role: "Bucătar șef", bio: "Scurtă prezentare a persoanei.", image: images.team1 },
-  { name: "Nume Prenume", role: "Sommelier", bio: "Scurtă prezentare a persoanei.", image: images.team2 },
-  { name: "Nume Prenume", role: "Manager de sală", bio: "Scurtă prezentare a persoanei.", image: images.team3 },
-];
+export const team: { lead: Member; staff: Member[]; kitchen: Member[] } = {
+  lead: { name: "Stețcu Alexandru", role: "Administrator" },
+  staff: [
+    { name: "Robert Ganea", role: "Director financiar" },
+    { name: "Jurji David", role: "Ospătar" },
+  ],
+  kitchen: [
+    { name: "Moiș Lucas", role: "Șef bucătar" },
+    { name: "Cuceu Darius", role: "Bucătar" },
+    { name: "Cocoșila Alexandru", role: "Ajutor bucătar" },
+  ],
+};

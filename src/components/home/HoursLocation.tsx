@@ -15,9 +15,9 @@ export default function HoursLocation() {
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="h-full border border-gold/50 bg-cream p-8 sm:p-12">
+            <div className="h-full border border-brand/50 bg-cream p-8 sm:p-12">
               <h3 className="font-serif text-3xl text-pine">Program</h3>
-              <dl className="mt-6 divide-y divide-gold/30">
+              <dl className="mt-6 divide-y divide-brand/30">
                 {site.hours.map((h) => (
                   <div key={h.days} className="flex justify-between gap-6 py-4">
                     <dt className="text-ink/80">{h.days}</dt>
@@ -39,7 +39,7 @@ export default function HoursLocation() {
           </Reveal>
 
           <Reveal delay={150}>
-            <div className="h-full min-h-[22rem] border border-gold/50 p-2">
+            <div className="h-full min-h-[22rem] border border-brand/50 p-2">
               <iframe
                 title={`Harta: ${site.address.full}`}
                 src={mapEmbedUrl}

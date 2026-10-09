@@ -73,7 +73,7 @@ export default function GalleryGrid() {
                 className="h-auto w-full transition-transform duration-700 group-hover:scale-105"
               />
               <span className="absolute inset-0 bg-pine/0 transition-colors duration-500 group-hover:bg-pine/30" aria-hidden="true" />
-              <span className="absolute inset-3 border border-gold/0 transition-colors duration-500 group-hover:border-gold" aria-hidden="true" />
+              <span className="absolute inset-3 border border-brand/0 transition-colors duration-500 group-hover:border-brand" aria-hidden="true" />
             </button>
           </li>
         ))}

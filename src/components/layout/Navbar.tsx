@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navLinks, site } from "@/data/site";
+import { images } from "@/data/images";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -39,11 +41,15 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" onClick={() => setOpen(false)} className="group flex flex-col leading-none" aria-label={`${site.name} – prima pagină`}>
-          <span className="font-serif text-2xl font-semibold tracking-wide text-bone sm:text-[1.7rem]">
-            Grand Piece
-          </span>
-          <span className="mt-1 text-[0.6rem] uppercase tracking-[0.45em] text-gold-soft">Ristorante</span>
+        <Link href="/" onClick={() => setOpen(false)} className="block" aria-label={`${site.name} – prima pagină`}>
+          <Image
+            src={images.logoLight}
+            alt=""
+            width={852}
+            height={822}
+            priority
+            className={`w-auto transition-all duration-500 ${solid ? "h-12" : "h-[4.5rem]"}`}
+          />
         </Link>
 
         <nav aria-label="Navigare principală" className="hidden items-center gap-9 lg:flex">
@@ -52,8 +58,8 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               aria-current={isActive(l.href) ? "page" : undefined}
-              className={`relative text-[0.78rem] font-medium uppercase tracking-[0.22em] transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-gold after:transition-transform after:duration-300 hover:text-gold-soft ${
-                isActive(l.href) ? "text-gold-soft after:scale-x-100" : "text-bone after:scale-x-0 hover:after:scale-x-100"
+              className={`relative text-[0.78rem] font-medium uppercase tracking-[0.22em] transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-brand after:transition-transform after:duration-300 hover:text-sand ${
+                isActive(l.href) ? "text-sand after:scale-x-100" : "text-bone after:scale-x-0 hover:after:scale-x-100"
               }`}
             >
               {l.label}
@@ -61,7 +67,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/rezervari"
-            className="border border-gold bg-gold px-6 py-2.5 text-[0.75rem] font-medium uppercase tracking-[0.22em] text-pine transition-colors hover:bg-transparent hover:text-gold-soft"
+            className="border border-brand bg-brand px-6 py-2.5 text-[0.75rem] font-medium uppercase tracking-[0.22em] text-bone transition-colors hover:border-sand hover:bg-transparent hover:text-sand"
           >
             Rezervări
           </Link>
@@ -110,7 +116,7 @@ export default function Navbar() {
               aria-current={isActive(l.href) ? "page" : undefined}
               tabIndex={open ? 0 : -1}
               onClick={() => setOpen(false)}
-              className={`font-serif text-4xl ${isActive(l.href) ? "text-gold-soft" : "text-bone"} hover:text-gold-soft`}
+              className={`font-serif text-4xl ${isActive(l.href) ? "text-sand" : "text-bone"} hover:text-sand`}
             >
               {l.label}
             </Link>
@@ -119,7 +125,7 @@ export default function Navbar() {
             href="/rezervari"
             tabIndex={open ? 0 : -1}
             onClick={() => setOpen(false)}
-            className="mt-4 border border-gold bg-gold px-10 py-3.5 text-sm font-medium uppercase tracking-[0.25em] text-pine"
+            className="mt-4 border border-brand bg-brand px-10 py-3.5 text-sm font-medium uppercase tracking-[0.25em] text-bone"
           >
             Rezervări
           </Link>

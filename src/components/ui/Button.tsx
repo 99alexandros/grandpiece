@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type Variant = "gold" | "outline" | "outline-dark" | "wine";
+type Variant = "brand" | "outline" | "outline-dark" | "wine";
 
 const variants: Record<Variant, string> = {
-  gold: "bg-gold text-pine hover:bg-gold-soft border border-gold",
+  brand: "bg-brand text-bone hover:bg-wine border border-brand hover:border-wine",
   wine: "bg-wine text-bone hover:bg-[#8a2a39] border border-wine",
   outline: "border border-bone/70 text-bone hover:bg-bone hover:text-pine",
   "outline-dark": "border border-pine text-pine hover:bg-pine hover:text-bone",
@@ -22,7 +22,7 @@ interface ButtonLinkProps {
 export default function ButtonLink({
   href,
   children,
-  variant = "gold",
+  variant = "brand",
   className = "",
   external,
   ariaLabel,

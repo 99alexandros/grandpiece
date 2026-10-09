@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-const h3 = "text-[0.75rem] font-medium uppercase tracking-[0.3em] text-gold";
+const h3 = "text-[0.75rem] font-medium uppercase tracking-[0.3em] text-brand";
 
 export default function ContactPage() {
   const ig = site.social.instagram;
@@ -33,7 +33,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h2 className={h3}>Program</h2>
-              <dl className="mt-3 divide-y divide-gold/30 border-y border-gold/30">
+              <dl className="mt-3 divide-y divide-brand/30 border-y border-brand/30">
                 {site.hours.map((h) => (
                   <div key={h.days} className="flex justify-between gap-4 py-3">
                     <dt className="text-ink/75">{h.days}</dt>
@@ -70,7 +70,7 @@ export default function ContactPage() {
         </Reveal>
 
         <Reveal delay={150}>
-          <div className="min-h-[26rem] border border-gold/50 p-2 lg:h-full">
+          <div className="min-h-[26rem] border border-brand/50 p-2 lg:h-full">
             <iframe
               title={`Harta: ${site.address.full}`}
               src={mapEmbedUrl}

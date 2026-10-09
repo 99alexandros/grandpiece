@@ -16,25 +16,25 @@ export default function FeaturedDishes() {
 
         <ul className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {featuredDishes.map((dish, i) => (
-            <Reveal as="li" key={dish.id} delay={i * 120}>
+            <Reveal as="li" key={dish.code} delay={i * 120}>
               <article className="group h-full">
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative aspect-square overflow-hidden">
                   {dish.image && (
                     <Image
                       src={dish.image}
-                      alt={`Fotografie: ${dish.name}`}
+                      alt={`${dish.name} – ${dish.description}`}
                       fill
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   )}
-                  <div className="absolute inset-0 border border-gold/0 transition-colors duration-500 group-hover:border-gold/80 m-3" aria-hidden="true" />
+                  <div className="absolute inset-3 border border-sand/0 transition-colors duration-500 group-hover:border-sand/80" aria-hidden="true" />
                 </div>
                 <div className="mt-5 flex items-baseline justify-between gap-4 border-b border-bone/15 pb-3">
                   <h3 className="font-serif text-2xl text-bone">{dish.name}</h3>
-                  <span className="whitespace-nowrap font-serif text-xl text-gold-soft">{formatPrice(dish.price)}</span>
+                  <span className="whitespace-nowrap font-serif text-xl text-sand">{formatPrice(dish.price)}</span>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-bone/70">{dish.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-bone/70 first-letter:uppercase">{dish.description}</p>
               </article>
             </Reveal>
           ))}

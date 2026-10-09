@@ -14,7 +14,7 @@ import { site } from "@/data/site";
 const empty: ReservationInput = { name: "", phone: "", date: "", time: "", guests: "2", notes: "" };
 
 const fieldCls =
-  "w-full border bg-cream px-4 py-3 text-ink placeholder:text-ink/40 transition-colors focus:border-gold";
+  "w-full border bg-cream px-4 py-3 text-ink placeholder:text-ink/40 transition-colors focus:border-brand";
 
 function ErrorMsg({ errors, k }: { errors: ReservationErrors; k: keyof ReservationInput }) {
   if (!errors[k]) return null;
@@ -83,8 +83,8 @@ export default function ReservationForm() {
       year: "numeric",
     });
     return (
-      <div role="status" className="border border-gold bg-cream p-10 text-center sm:p-14">
-        <p className="font-serif text-6xl text-gold" aria-hidden="true">✓</p>
+      <div role="status" className="border border-brand bg-cream p-10 text-center sm:p-14">
+        <p className="font-serif text-6xl text-brand" aria-hidden="true">✓</p>
         <h2 className="mt-4 font-serif text-4xl text-pine">Mulțumim, {confirmed.name.trim()}!</h2>
         <p className="mx-auto mt-5 max-w-md text-lg text-ink/80">
           Am primit cererea dumneavoastră pentru {confirmed.guests}{" "}
@@ -112,7 +112,7 @@ export default function ReservationForm() {
   const labelCls = "mb-2 block text-[0.75rem] font-medium uppercase tracking-[0.2em] text-pine";
 
   return (
-    <form onSubmit={onSubmit} noValidate className="border border-gold/60 bg-cream p-6 sm:p-10" aria-label="Formular de rezervare">
+    <form onSubmit={onSubmit} noValidate className="border border-brand/60 bg-cream p-6 sm:p-10" aria-label="Formular de rezervare">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label htmlFor="f-name" className={labelCls}>Nume complet *</label>

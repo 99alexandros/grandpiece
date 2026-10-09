@@ -20,42 +20,44 @@ npm run lint
 | Recenzii | `src/data/reviews.ts` |
 | Echipa | `src/data/team.ts` |
 | Pozele din galerie | `src/data/gallery.ts` |
-| Textele din Hero, „Despre locul nostru”, „Povestea noastră” | `src/data/copy.ts` |
-| Toate imaginile (hero, preparate, echipă) | `src/data/images.ts` |
+| Textele din Hero, introducere, „Povestea noastră”, motto | `src/data/copy.ts` |
+| Imaginile principale și logo-ul | `src/data/images.ts` |
 | Culori | `src/app/globals.css` (variabilele din `:root`) |
 
 ## Cum editezi meniul
 
-Deschide `src/data/menu.ts`. Fiecare preparat este un obiect în lista `dishes`:
+Meniul a fost preluat din catalogul Grand Piece (53 de produse, cu prețuri în lei). Deschide `src/data/menu.ts`; fiecare produs este un obiect în lista `dishes`:
 
 ```ts
 {
-  id: "m1",                         // unic
-  category: "mains",                // starters | mains | desserts | drinks
-  name: "Numele preparatului",
-  description: "Ingrediente, mod de preparare…",
-  price: 59,                        // în lei (RON)
-  tags: ["picant", "vegetarian"],   // vegetarian | vegan | picant | fara-gluten | specialitatea-casei
-  image: images.dish1,              // opțional – apare doar la preparatele recomandate
-  featured: true,                   // opțional – apare în „Preparate recomandate” pe prima pagină
+  code: "007",                          // cod unic (din catalog)
+  category: "principali",               // antipasti | principali | paste | pizza | desert | bauturi
+  subcategory: "Carne",                 // opțional – grupează produsele în interiorul categoriei
+  name: "Tagliata di manzo",
+  description: "mușchi de vită feliat, rucola, roșii cherry, parmezan",
+  price: 109,                           // în lei (RON)
+  tags: ["picant"],                     // vegetarian | vegan | picant | fara-gluten | specialitatea-casei
+  image: "/menu/007.jpg",               // opțional
+  featured: true,                       // opțional – apare în „Preparate recomandate” pe prima pagină
 }
 ```
 
-- Pentru a **adăuga** un preparat, copiază un obiect și modifică-l; pentru a-l **șterge**, elimină obiectul.
-- Pentru a schimba numele categoriilor, modifică lista `categories`.
-- Pentru o etichetă nouă, adaug-o în tipul `Tag` și în `tagLabels`.
-- Cât timp `price` este `0`, se afișează „– lei”.
+- Pentru a **adăuga** un produs, copiază un obiect și modifică-l; pentru a-l **șterge**, elimină obiectul.
+- Ordinea din fișier este ordinea afișată pe site.
+- Numele categoriilor se schimbă în lista `categories`.
+- Etichetele (vegetarian, picant etc.) trebuie verificate de restaurant – cele existente sunt orientative.
+
+## Logo și culori
+
+- Logo-ul este în `public/brand/`: `logo.png` (colorat, pentru fundal deschis) și `logo-light.png` (variantă deschisă, pentru fundal verde închis, folosită în navbar, hero și footer).
+- Culorile (verde, roșu, crem) sunt în `src/app/globals.css`, în blocul `:root`.
 
 ## Cum schimbi pozele
 
-Momentan imaginile sunt de probă de pe Unsplash (`src/data/images.ts`).
-
-1. Pune pozele tale în `public/images/` (ex. `public/images/hero.jpg`).
-2. În `src/data/images.ts`, înlocuiește adresa cu calea locală: `hero: "/images/hero.jpg"`.
-3. Pentru galerie, editează `src/data/gallery.ts` (`src`, `alt`, `width`, `height` – dimensiunile reale ale pozei).
-4. Scrie întotdeauna un `alt` descriptiv (accesibilitate + SEO).
-
-Poți șterge din `next.config.ts` domeniul `images.unsplash.com` după ce renunți la pozele de probă.
+- **Preparatele**: fotografiile sunt în `public/menu/` (`001.jpg` … `047.jpg`, numărul = codul produsului). Pentru a înlocui una, pune un fișier nou cu același nume sau schimbă `image` în `src/data/menu.ts`.
+- **Poza mare din prima pagină (hero)**: este încă o poză de probă de pe Unsplash. Pune o fotografie reală în `public/images/hero.jpg` și în `src/data/images.ts` schimbă `hero` în `"/images/hero.jpg"`.
+- **Galeria**: editează `src/data/gallery.ts` (`src`, `alt`, `width`, `height`).
+- Scrie întotdeauna un `alt` descriptiv (accesibilitate + SEO).
 
 ## Rezervări
 

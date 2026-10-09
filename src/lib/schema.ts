@@ -8,7 +8,7 @@ export function restaurantJsonLd() {
     "@type": "Restaurant",
     name: site.name,
     url: site.url,
-    image: images.ogImage,
+    image: `${site.url}${images.ogImage}`,
     description: site.description,
     servesCuisine: "Italiană",
     telephone: site.phone,

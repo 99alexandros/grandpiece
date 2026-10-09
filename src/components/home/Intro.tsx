@@ -9,11 +9,11 @@ export default function Intro() {
   return (
     <section id="intro" className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:py-32">
       <Reveal>
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-md lg:max-w-none">
-          <div className="absolute -inset-3 translate-x-3 translate-y-3 border border-gold" aria-hidden="true" />
+        <div className="relative mx-auto aspect-square w-full max-w-md lg:max-w-none">
+          <div className="absolute -inset-3 translate-x-3 translate-y-3 border border-brand" aria-hidden="true" />
           <Image
             src={images.intro}
-            alt="Atmosferă caldă și elegantă în restaurantul Grand Piece"
+            alt="Orata alla griglia, dorada la grătar"
             fill
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="object-cover"

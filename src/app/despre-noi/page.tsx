@@ -6,13 +6,24 @@ import Reveal from "@/components/ui/Reveal";
 import ButtonLink from "@/components/ui/Button";
 import { copy } from "@/data/copy";
 import { images } from "@/data/images";
-import { team } from "@/data/team";
+import { team, type Member } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "Despre noi",
   description: "Povestea restaurantului Grand Piece și echipa care vă întâmpină în Timișoara.",
   alternates: { canonical: "/despre-noi" },
 };
+
+function MemberCard({ member, large }: { member: Member; large?: boolean }) {
+  return (
+    <article
+      className={`border border-sand/30 bg-pine-soft/40 px-6 text-center ${large ? "w-full max-w-sm py-10" : "py-7"}`}
+    >
+      <p className={`font-serif text-bone ${large ? "text-4xl" : "text-2xl"}`}>{member.name}</p>
+      <p className="mt-2 text-[0.72rem] uppercase tracking-[0.3em] text-sand">{member.role}</p>
+    </article>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -30,10 +41,10 @@ export default function AboutPage() {
         </Reveal>
         <Reveal delay={150}>
           <div className="relative aspect-[4/3] w-full">
-            <div className="absolute -inset-3 -translate-x-3 translate-y-3 border border-gold" aria-hidden="true" />
+            <div className="absolute -inset-3 -translate-x-3 translate-y-3 border border-brand" aria-hidden="true" />
             <Image
               src={images.about}
-              alt="Interiorul restaurantului Grand Piece"
+              alt="Fritto misto, specialitate Grand Piece"
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover"
@@ -43,32 +54,37 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-pine py-24" aria-labelledby="team-title">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8">
           <Reveal>
             <div id="team-title">
-              <SectionTitle eyebrow="Oamenii noștri" title="Echipa" light />
+              <SectionTitle eyebrow="Oamenii noștri" title="Echipa Grand Piece" light />
             </div>
           </Reveal>
-          <ul className="mt-16 grid gap-12 md:grid-cols-3">
-            {team.map((m, i) => (
-              <Reveal as="li" key={i} delay={i * 130}>
-                <article className="text-center">
-                  <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden">
-                    <Image
-                      src={m.image}
-                      alt={`${m.name}, ${m.role}`}
-                      fill
-                      sizes="(min-width: 768px) 30vw, 80vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <h3 className="mt-6 font-serif text-3xl text-bone">{m.name}</h3>
-                  <p className="mt-1 text-[0.75rem] uppercase tracking-[0.3em] text-gold-soft">{m.role}</p>
-                  <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-bone/70">{m.bio}</p>
-                </article>
-              </Reveal>
-            ))}
-          </ul>
+
+          <Reveal>
+            <div className="mt-16 flex justify-center">
+              <MemberCard member={team.lead} large />
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-10 md:grid-cols-2">
+            <Reveal>
+              <h3 className="mb-6 text-center text-[0.75rem] uppercase tracking-[0.35em] text-sand">Administrație și sală</h3>
+              <ul className="grid gap-4 sm:grid-cols-2">
+                {team.staff.map((m) => (
+                  <li key={m.name}><MemberCard member={m} /></li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={120}>
+              <h3 className="mb-6 text-center text-[0.75rem] uppercase tracking-[0.35em] text-sand">Bucătărie</h3>
+              <ul className="grid gap-4 sm:grid-cols-2">
+                {team.kitchen.map((m, i) => (
+                  <li key={m.name} className={i === 0 ? "sm:col-span-2" : ""}><MemberCard member={m} /></li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
         </div>
       </section>
 

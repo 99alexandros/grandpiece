@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #faf5ec;
-  --cream-deep: #f1e8d6;
-  --pine: #14261f;
-  --pine-soft: #1d3a2f;
-  --gold: #b8924a;
-  --gold-soft: #d6b87c;
-  --wine: #6e1f2b;
+  --cream: #f4f0e8;
+  --cream-deep: #e9e3d4;
+  --pine: #14392a;
+  --pine-soft: #1d5a3b;
+  --brand: #b5232f;
+  --sand: #e8d9b8;
+  --wine: #8a1a25;
   --ink: #241e1a;
-  --bone: #f3ebdd;
+  --bone: #f6f1e6;
 }
 
 @theme inline {
@@ -17,8 +17,8 @@
   --color-cream-deep: var(--cream-deep);
   --color-pine: var(--pine);
   --color-pine-soft: var(--pine-soft);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
+  --color-brand: var(--brand);
+  --color-sand: var(--sand);
   --color-wine: var(--wine);
   --color-ink: var(--ink);
   --color-bone: var(--bone);
@@ -39,13 +39,14 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--sand);
   outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--pine);
   border-radius: 2px;
 }
 
 ::selection {
-  background: var(--gold-soft);
+  background: var(--sand);
   color: var(--pine);
 }
 
@@ -68,7 +69,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  color: var(--gold);
 }
 .ornament::before,
 .ornament::after {
