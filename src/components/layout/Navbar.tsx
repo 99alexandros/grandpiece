@@ -55,6 +55,7 @@ export default function Navbar() {
             alt=""
             width={1100}
             height={668}
+            sizes="160px"
             priority
             className={`w-auto transition-all duration-500 ${solid ? "h-14" : "h-[4.5rem]"}`}
           />

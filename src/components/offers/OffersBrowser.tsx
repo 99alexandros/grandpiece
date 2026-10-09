@@ -12,7 +12,7 @@ const tabs = [
 
 type TabId = (typeof tabs)[number]["id"];
 
-function OfferCard({ offer, index }: { offer: Offer; index: number }) {
+function OfferCard({ offer, index, priority }: { offer: Offer; index: number; priority?: boolean }) {
   return (
     <li className="group flex flex-col overflow-hidden border border-pine/10 bg-white shadow-sm shadow-black/5 transition-shadow duration-300 hover:shadow-lg hover:shadow-black/10">
       <div className="relative aspect-[4/5] overflow-hidden bg-pine">
@@ -20,6 +20,7 @@ function OfferCard({ offer, index }: { offer: Offer; index: number }) {
           src={offer.image}
           alt={`${offer.title} – ${offer.description}`}
           fill
+          priority={priority}
           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
@@ -80,7 +81,7 @@ export default function OffersBrowser() {
 
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {current.offers.map((o, i) => (
-            <OfferCard key={o.id} offer={o} index={i} />
+            <OfferCard key={o.id} offer={o} index={i} priority={i < 3} />
           ))}
         </ul>
 

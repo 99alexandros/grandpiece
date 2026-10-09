@@ -27,6 +27,7 @@ export default function Hero() {
             width={1100}
             height={668}
             priority
+            sizes="(min-width: 640px) 34rem, 75vw"
             className="mx-auto h-auto max-h-[30svh] w-[min(75vw,34rem)] object-contain sm:max-h-none sm:w-[min(85vw,34rem)]"
           />
         </h1>

@@ -10,15 +10,15 @@ import { restaurantJsonLd } from "@/lib/schema";
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400"],
+  style: ["italic"],
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin", "latin-ext"],
-  weight: ["500", "600", "700"],
+  weight: ["500", "600"],
   display: "swap",
 });
 

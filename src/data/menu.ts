@@ -81,7 +81,7 @@ export const dishes: Dish[] = [
 ];
 
 // „Preparate recomandate” de pe prima pagină – codurile produselor, în ordinea afișării.
-export const featuredCodes = ["013", "026", "011", "015"];
+const featuredCodes = ["013", "026", "011", "015"];
 
 export const featuredDishes = featuredCodes
   .map((code) => dishes.find((d) => d.code === code))

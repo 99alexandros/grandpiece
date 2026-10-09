@@ -171,7 +171,7 @@ export default function ReservationForm() {
               <option key={n} value={n}>{n} {n === 1 ? "persoană" : "persoane"}</option>
             ))}
           </select>
-          <p className="mt-1.5 text-sm text-ink/60">
+          <p className="mt-1.5 text-sm text-ink/75">
             Pentru grupuri mai mari de {MAX_GUESTS} persoane, sunați la {site.phone}.
           </p>
           <ErrorMsg errors={errors} k="guests" />
@@ -199,7 +199,7 @@ export default function ReservationForm() {
       >
         {status === "sending" ? "Se trimite…" : "Trimite rezervarea"}
       </button>
-      <p className="mt-4 text-center text-sm text-ink/60">* câmpuri obligatorii</p>
+      <p className="mt-4 text-center text-sm text-ink/75">* câmpuri obligatorii</p>
     </form>
   );
 }
